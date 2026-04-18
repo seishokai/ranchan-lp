@@ -204,6 +204,13 @@ nav{position:fixed;top:34px;left:0;right:0;z-index:100;padding:.85rem 1.3rem;dis
 #event .vcard .vb{padding:1.3rem 1.4rem;}
 #event .vcard .vrow{display:flex;gap:.6rem;margin-bottom:.65rem;font-size:.83rem;color:var(--ink-soft);line-height:1.8;}
 #event .vcard .vrow .vk{color:var(--gold-deep);font-family:'Cormorant Garamond',serif;font-size:.7rem;letter-spacing:.15em;min-width:72px;padding-top:.18rem;}
+#event .e-flow{background:var(--cream);}
+#event .flow-list{display:flex;flex-direction:column;gap:.9rem;max-width:560px;margin:0 auto;}
+#event .flow-step{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.1rem 1.3rem;display:flex;gap:1rem;align-items:flex-start;box-shadow:0 2px 14px rgba(197,165,90,.05);}
+#event .flow-num{font-family:'Playfair Display',serif;font-style:italic;font-size:1.55rem;color:var(--gold);line-height:1;padding-top:.1rem;min-width:40px;}
+#event .flow-body h4{font-family:'Zen Old Mincho',serif;font-size:.98rem;color:var(--ink);margin-bottom:.3rem;}
+#event .flow-body p{font-size:.8rem;color:var(--ink-soft);line-height:1.85;}
+#event .flow-body .flow-time{display:inline-block;font-family:'Cormorant Garamond',serif;font-size:.68rem;letter-spacing:.1em;color:var(--gold-deep);background:var(--cream2);padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle;}
 #event .e-cta-sec{background:linear-gradient(148deg,#F9F2E0 0%,#EFE3C2 50%,#E8D9AE 100%);padding:5rem 1.4rem;text-align:center;}
 #event .e-cta-sec h2{font-family:'Zen Old Mincho',serif;font-size:clamp(1.35rem,5vw,2.1rem);color:var(--ink);line-height:1.6;margin-bottom:.8rem;}
 #event .e-cta-sec p{font-size:.82rem;color:var(--ink-soft);margin-bottom:2rem;line-height:2;}
@@ -255,9 +262,9 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
       <div class="date-wd">Wednesday · Thursday</div>
     </div>
     <h2 class="e-h1"><span class="g">無料カウンセリング</span>＆<br>自費クリーニング相談会</h2>
-    <p class="e-venue">at <strong>BF銀座歯科・矯正歯科</strong></p>
-    <p class="e-acc">東京メトロ 銀座駅 徒歩3分</p>
-    <span class="e-limit">◆ 各時間帯 1枠限定 ◆</span>
+    <p class="e-venue">会場 ／ <strong>BF銀座歯科・矯正歯科</strong></p>
+    <p class="e-acc">東京メトロ 銀座駅 徒歩3分 ／ JR 有楽町駅 徒歩5分</p>
+    <span class="e-limit">2日間限定 ／ 各時間 1枠のみ</span>
     <a href="https://reserve.shareconnect.co.jp/?r=i3rlgb&treatment_ids=1776529038261%2C1776529022259" target="_blank" rel="noopener" class="e-cta-btn">5/21・22 限定イベントを予約する</a>
   </div>
 
@@ -323,6 +330,47 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
         </div>
         <p class="slots-note">上記の時間帯のうち、<strong>1時間に1枠のみ</strong> ご予約いただけます<br>※ 先着順・埋まり次第終了</p>
       </div>
+    </div>
+  </div>
+
+  <div class="sec e-flow">
+    <div class="si">
+      <div class="rv">
+        <span class="sl evc">Flow</span>
+        <h3 class="st evc">当日の<em>流れ</em></h3>
+        <div class="gsep"><span>◈</span></div>
+      </div>
+      <div class="flow-list rv d1">
+        <div class="flow-step">
+          <div class="flow-num">01</div>
+          <div class="flow-body">
+            <h4>ご来院・受付<span class="flow-time">5分</span></h4>
+            <p>予約時間に合わせてご来院ください。受付にて簡単な問診票をご記入いただきます。</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">02</div>
+          <div class="flow-body">
+            <h4>お悩み・ご希望のヒアリング<span class="flow-time">10分</span></h4>
+            <p>歯並び・歯の色・クリーニングなど、気になっていることをお伺いします。ご希望や予算感もお気軽にお話しください。</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">03</div>
+          <div class="flow-body">
+            <h4>口腔内チェック<span class="flow-time">15分</span></h4>
+            <p>現在のお口の状態を確認し、写真撮影や必要に応じた簡単な検査を行います（無理な勧誘は一切いたしません）。</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-num">04</div>
+          <div class="flow-body">
+            <h4>治療プラン・お見積のご提案<span class="flow-time">15分</span></h4>
+            <p>最適な治療方針・期間・費用を分かりやすくご説明します。その場でのご契約は不要です。ご自宅でじっくりご検討いただけます。</p>
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:.76rem;color:var(--ink-soft);letter-spacing:.05em;">所要時間 ／ <strong style="color:var(--gold-deep);">約45〜60分</strong></p>
     </div>
   </div>
 
