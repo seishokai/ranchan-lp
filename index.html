@@ -231,7 +231,13 @@ nav{position:fixed;top:34px;left:0;right:0;z-index:100;padding:.85rem 1.3rem;dis
 #event .slots-note strong{color:#B8432E;font-weight:700;}
 #event .e-venue-sec{background:var(--white);}
 #event .vcard{border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:0 2px 20px rgba(197,165,90,.06);max-width:560px;margin:0 auto;}
+#event .vcard .v-img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;border-bottom:1px solid var(--border);}
 #event .vcard .vh{background:linear-gradient(135deg,rgba(197,165,90,.13) 0%,rgba(197,165,90,.06) 100%);padding:1.2rem 1.4rem;border-bottom:1px solid var(--border);}
+#event .venue-gallery{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;max-width:560px;margin:1rem auto 0;}
+#event .venue-gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:2px;display:block;background:#eee;}
+#event .e-intro-img{position:relative;max-width:620px;margin:0 auto;padding:2.8rem 1.4rem 0;}
+#event .e-intro-img img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;display:block;box-shadow:0 8px 32px rgba(44,37,32,.12);}
+#event .e-intro-img .intro-cap{text-align:center;font-family:'Cormorant Garamond',serif;font-size:.72rem;letter-spacing:.22em;color:var(--gold-deep);margin-top:.7rem;text-transform:uppercase;}
 #event .vcard .ven{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-style:italic;color:var(--gold-deep);font-weight:600;}
 #event .vcard .vjp{font-family:'Zen Old Mincho',serif;font-size:1rem;color:var(--ink);margin-top:.2rem;}
 #event .vcard .vb{padding:1.3rem 1.4rem;}
@@ -240,7 +246,10 @@ nav{position:fixed;top:34px;left:0;right:0;z-index:100;padding:.85rem 1.3rem;dis
 #event .e-flow{background:var(--cream);}
 #event .flow-list{display:flex;flex-direction:column;gap:.9rem;max-width:560px;margin:0 auto;}
 #event .flow-step{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.1rem 1.3rem;display:flex;gap:1rem;align-items:flex-start;box-shadow:0 2px 14px rgba(197,165,90,.05);}
-#event .flow-num{font-family:'Playfair Display',serif;font-style:italic;font-size:1.55rem;color:var(--gold);line-height:1;padding-top:.1rem;min-width:40px;}
+#event .flow-step.has-img{padding:0;overflow:hidden;display:grid;grid-template-columns:90px 1fr;}
+#event .flow-thumb{width:100%;height:100%;min-height:120px;object-fit:cover;display:block;background:#eee;}
+#event .flow-step.has-img .flow-inner{padding:1.1rem 1.3rem;display:flex;gap:.9rem;align-items:flex-start;}
+#event .flow-num{font-family:'Playfair Display',serif;font-style:italic;font-size:1.55rem;color:var(--gold);line-height:1;padding-top:.1rem;min-width:34px;flex-shrink:0;}
 #event .flow-body h4{font-family:'Zen Old Mincho',serif;font-size:.98rem;color:var(--ink);margin-bottom:.3rem;}
 #event .flow-body p{font-size:.8rem;color:var(--ink-soft);line-height:1.85;}
 #event .flow-body .flow-time{display:inline-block;font-family:'Cormorant Garamond',serif;font-size:.68rem;letter-spacing:.1em;color:var(--gold-deep);background:var(--cream2);padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle;}
@@ -340,6 +349,11 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
     <a href="https://reserve.shareconnect.co.jp/?r=i3rlgb&treatment_ids=1776529038261%2C1776529022259" target="_blank" rel="noopener" class="e-cta-btn">5/21・22 限定イベントを予約する</a>
   </div>
 
+  <div class="e-intro-img">
+    <img src="https://lh3.googleusercontent.com/d/1-80qQWFu1yQavHZOb0ATawKW0Kw5PUGL=w1400" alt="BF銀座歯科・矯正歯科 スタッフ" loading="lazy">
+    <p class="intro-cap">BF Ginza Dental Clinic — Team</p>
+  </div>
+
   <div class="sec e-menu">
     <div class="si">
       <div class="rv">
@@ -426,25 +440,34 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
         <div class="gsep"><span>◈</span></div>
       </div>
       <div class="flow-list rv d1">
-        <div class="flow-step">
-          <div class="flow-num">01</div>
-          <div class="flow-body">
-            <h4>ご来院・らんちゃんがお出迎え<span class="flow-time">5分</span></h4>
-            <p>予約時間に合わせてご来院ください。受付にて <strong>らんちゃんがお出迎え</strong> し、緊張しないよう簡単にご案内します。問診票もその場でサポートいたします。</p>
+        <div class="flow-step has-img">
+          <img src="https://lh3.googleusercontent.com/d/1DCo7IXh6P5E_tzJyKrlMcZJv4wUPK_jD=w400" alt="受付スタッフ" loading="lazy" class="flow-thumb">
+          <div class="flow-inner">
+            <div class="flow-num">01</div>
+            <div class="flow-body">
+              <h4>ご来院・らんちゃんがお出迎え<span class="flow-time">5分</span></h4>
+              <p>予約時間に合わせてご来院ください。受付にて <strong>らんちゃんがお出迎え</strong> し、緊張しないよう簡単にご案内します。問診票もその場でサポートいたします。</p>
+            </div>
           </div>
         </div>
-        <div class="flow-step">
-          <div class="flow-num">02</div>
-          <div class="flow-body">
-            <h4>らんちゃん同席のヒアリング<span class="flow-time">10分</span></h4>
-            <p>カウンセリングには <strong>らんちゃんが同席</strong> し、歯並び・歯の色・クリーニングなど気になっていることをじっくりお伺いします。ご希望や予算感もお気軽にお話しください。</p>
+        <div class="flow-step has-img">
+          <img src="https://lh3.googleusercontent.com/d/18bdwwhokBUTFXx89rbTjmoDBSw6WJX4P=w400" alt="カウンセリング風景" loading="lazy" class="flow-thumb">
+          <div class="flow-inner">
+            <div class="flow-num">02</div>
+            <div class="flow-body">
+              <h4>らんちゃん同席のヒアリング<span class="flow-time">10分</span></h4>
+              <p>カウンセリングには <strong>らんちゃんが同席</strong> し、歯並び・歯の色・クリーニングなど気になっていることをじっくりお伺いします。ご希望や予算感もお気軽にお話しください。</p>
+            </div>
           </div>
         </div>
-        <div class="flow-step">
-          <div class="flow-num">03</div>
-          <div class="flow-body">
-            <h4>口腔内チェック<span class="flow-time">15分</span></h4>
-            <p>現在のお口の状態を確認し、写真撮影や必要に応じた簡単な検査を行います（無理な勧誘は一切いたしません）。</p>
+        <div class="flow-step has-img">
+          <img src="https://lh3.googleusercontent.com/d/11amH5YTJTYuk8VLiCS17cVzA5TkKuEdL=w400" alt="口腔内チェック" loading="lazy" class="flow-thumb">
+          <div class="flow-inner">
+            <div class="flow-num">03</div>
+            <div class="flow-body">
+              <h4>口腔内チェック<span class="flow-time">15分</span></h4>
+              <p>現在のお口の状態を確認し、写真撮影や必要に応じた簡単な検査を行います（無理な勧誘は一切いたしません）。</p>
+            </div>
           </div>
         </div>
         <div class="flow-step">
@@ -467,6 +490,7 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
         <div class="gsep"><span>◈</span></div>
       </div>
       <div class="vcard rv d1">
+        <img src="https://lh3.googleusercontent.com/d/13EBdHuuCgSJgeIe29KaM5S5-fyrSiDKd=w1200" alt="BF銀座歯科 外観" class="v-img" loading="lazy">
         <div class="vh">
           <div class="ven">BF Ginza Dental Clinic</div>
           <div class="vjp">BF銀座歯科・矯正歯科</div>
@@ -476,6 +500,11 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
           <div class="vrow"><div class="vk">HOURS</div><div>9:30 — 13:30 / 14:30 — 18:00</div></div>
           <div class="vrow"><div class="vk">EVENT</div><div>5/21(水)・22(木) の 2日間限定</div></div>
         </div>
+      </div>
+      <div class="venue-gallery rv d2">
+        <img src="https://lh3.googleusercontent.com/d/185VVQF6fqhkbKZagc9Mw-sZoTROzoTI4=w500" alt="BF銀座 ドクター陣" loading="lazy">
+        <img src="https://lh3.googleusercontent.com/d/1AzctMiJMi2MsJoS0t79nBsbLhCWqBbSd=w500" alt="ベニア製作" loading="lazy">
+        <img src="https://lh3.googleusercontent.com/d/1Br3gDaL2B53Q9WlvxruZ2BzZ7kwAPlJ9=w500" alt="BF銀座歯科" loading="lazy">
       </div>
     </div>
   </div>
