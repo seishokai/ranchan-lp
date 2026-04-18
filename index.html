@@ -202,6 +202,14 @@ nav{position:fixed;top:34px;left:0;right:0;z-index:100;padding:.85rem 1.3rem;dis
 #event .mcard h3{font-family:'Zen Old Mincho',serif;font-size:1.12rem;color:var(--ink);margin-bottom:.6rem;margin-top:.4rem;}
 #event .mcard .price-line{font-family:'Cormorant Garamond',serif;color:#B8432E;font-size:.9rem;font-weight:600;letter-spacing:.08em;margin-bottom:.7rem;}
 #event .mcard p{font-size:.84rem;line-height:1.95;color:var(--ink-soft);margin-bottom:.7rem;}
+#event .ran-price-box{background:linear-gradient(135deg,#FBF5E6,#F5EDD5);border:1px solid var(--gold-light);border-radius:4px;padding:.95rem 1.1rem;margin:.3rem 0 1rem;position:relative;}
+#event .rp-tag{position:absolute;top:-10px;left:1rem;background:#B8432E;color:#fff;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.62rem;letter-spacing:.2em;padding:.18rem .55rem;border-radius:2px;text-transform:uppercase;}
+#event .rp-main{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.5rem;margin-top:.2rem;margin-bottom:.4rem;}
+#event .rp-name{font-family:'Zen Old Mincho',serif;font-size:.95rem;color:var(--ink);font-weight:700;}
+#event .rp-val{font-family:'Playfair Display',serif;font-style:italic;color:var(--gold-deep);font-size:.9rem;}
+#event .rp-val strong{font-size:1.55rem;color:#B8432E;font-weight:700;letter-spacing:.02em;}
+#event .rp-tax{font-family:'Noto Serif JP',serif;font-size:.7rem;color:var(--ink-mute);font-style:normal;font-weight:400;}
+#event .rp-note{font-size:.72rem;color:var(--ink-soft);line-height:1.6;margin:0!important;}
 #event .mcard ul{list-style:none;}
 #event .mcard ul li{font-size:.79rem;color:var(--ink-soft);padding-left:1rem;position:relative;line-height:1.9;}
 #event .mcard ul li::before{content:'✦';color:var(--gold);font-size:.5rem;position:absolute;left:0;top:.42rem;}
@@ -353,6 +361,14 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
       <div class="mcard rv d2">
         <span class="mno">02</span>
         <h3>自費クリーニング 相談会</h3>
+        <div class="ran-price-box">
+          <span class="rp-tag">Special</span>
+          <div class="rp-main">
+            <span class="rp-name">らんちゃんのクリーニング</span>
+            <span class="rp-val"><strong>¥22,000</strong> <span class="rp-tax">（税込）</span></span>
+          </div>
+          <p class="rp-note">クリーニング希望の方は、当日そのまま施術いただけます</p>
+        </div>
         <p>保険診療では落としきれない着色・ステイン・歯石を、自費診療ならではの機材と時間をかけて徹底的にケアします。当日は、実際のメニュー内容・施術時間・費用について詳しくご説明いたします。</p>
         <ul>
           <li>エアフロー（ステイン・プラーク除去）</li>
