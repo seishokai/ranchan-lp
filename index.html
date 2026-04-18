@@ -16,12 +16,18 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
 body{font-family:'Noto Serif JP',serif;background:var(--cream);color:var(--ink);overflow-x:hidden;}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.85rem 1.3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(253,251,247,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.promo-bar{position:fixed;top:0;left:0;right:0;z-index:200;background:linear-gradient(90deg,#2C2520,#4a3d2f,#2C2520);color:#fff;padding:.58rem 1rem;display:flex;align-items:center;justify-content:center;gap:.6rem;font-size:.72rem;letter-spacing:.04em;text-decoration:none;border-bottom:1px solid var(--gold);flex-wrap:wrap;transition:opacity .3s;}
+.promo-bar:hover{opacity:.92;}
+.promo-bar .pulse{width:8px;height:8px;border-radius:50%;background:#E8D5A0;animation:pulse 1.6s infinite;}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(232,213,160,.8);}70%{box-shadow:0 0 0 8px rgba(232,213,160,0);}100%{box-shadow:0 0 0 0 rgba(232,213,160,0);}}
+.promo-bar strong{color:#E8D5A0;font-family:'Playfair Display',serif;font-style:italic;font-weight:700;letter-spacing:.03em;margin-right:.15em;}
+.promo-bar .arrow{color:var(--gold);margin-left:.2em;}
+nav{position:fixed;top:34px;left:0;right:0;z-index:100;padding:.85rem 1.3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(253,251,247,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
 .logo{font-family:'Cormorant Garamond',serif;font-size:.98rem;font-weight:600;letter-spacing:.12em;color:var(--ink);}
 .logo span{color:var(--gold);}
 .nav-btn{background:var(--gold);color:#fff;border:none;padding:.52rem 1.05rem;font-family:'Noto Serif JP',serif;font-size:.72rem;letter-spacing:.07em;cursor:pointer;border-radius:2px;text-decoration:none;display:inline-block;transition:background .3s;}
 .nav-btn:hover{background:var(--gold-deep);}
-#hero{min-height:100svh;padding-top:58px;background:linear-gradient(148deg,#FFFFFF 0%,#FBF6EC 45%,#F5EDD8 100%);position:relative;overflow:hidden;display:flex;flex-direction:column;}
+#hero{min-height:100svh;padding-top:92px;background:linear-gradient(148deg,#FFFFFF 0%,#FBF6EC 45%,#F5EDD8 100%);position:relative;overflow:hidden;display:flex;flex-direction:column;}
 .hero-word{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Cormorant Garamond',serif;font-size:clamp(9rem,30vw,24rem);font-weight:300;font-style:italic;color:rgba(197,165,90,.05);white-space:nowrap;pointer-events:none;user-select:none;}
 .hero-body{padding:2.2rem 1.4rem 0;text-align:center;position:relative;z-index:2;}
 .hero-ey{font-family:'Cormorant Garamond',serif;font-size:.73rem;letter-spacing:.42em;color:var(--gold);text-transform:uppercase;margin-bottom:1rem;animation:fu .7s ease both;}
@@ -79,9 +85,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.85rem 1.3rem;displa
 .ajp{font-size:.68rem;color:var(--ink-mute);letter-spacing:.09em;}
 .abody{padding:1.4rem;background:var(--white);}
 .abody p{font-size:.81rem;line-height:2.05;color:var(--ink-soft);margin-bottom:.8rem;}
-.case-hero{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;}
+.case-wrap{max-width:500px;margin:0 auto;}
+.case-hero{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;max-height:260px;}
 .case-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:4px;}
-.case-grid img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#000;}
+.case-grid img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#000;max-height:130px;}
 .case-label{font-family:'Cormorant Garamond',serif;font-size:.67rem;letter-spacing:.12em;color:var(--ink-mute);text-align:center;padding:.3rem 0 .7rem;}
 .fl{list-style:none;margin-top:.75rem;display:flex;flex-direction:column;gap:.42rem;}
 .fl li{font-size:.79rem;color:var(--ink-soft);padding-left:1rem;position:relative;}
@@ -153,6 +160,10 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
 </style>
 </head>
 <body>
+<a href="event/" class="promo-bar">
+  <span class="pulse"></span>
+  <span><strong>5/21・22</strong> BF銀座 限定イベント ／ 無料カウンセリング＆クリーニング相談会<span class="arrow"> →</span></span>
+</a>
 <nav>
   <div class="logo">清翔会 <span>Dental</span></div>
   <a href="https://reserve.shareconnect.co.jp/?r=tb4d11&treatment_ids=1766627271947%2C1767579807369%2C1766627284554%2C1766641212044%2C1766627335021" target="_blank" class="nav-btn">無料相談を予約する</a>
