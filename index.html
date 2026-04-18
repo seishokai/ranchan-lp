@@ -39,6 +39,17 @@ nav{position:fixed;top:34px;left:0;right:0;z-index:100;padding:.85rem 1.3rem;dis
 .hero-pw{position:relative;max-width:365px;margin:0 auto;animation:fu .7s .44s ease both;}
 .hero-frame{position:absolute;top:-9px;left:-9px;right:9px;bottom:9px;border:1px solid rgba(197,165,90,.3);border-radius:4px;pointer-events:none;}
 .hero-img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top center;border-radius:4px 4px 0 0;display:block;background:linear-gradient(135deg,#F5EDD8,#E8D8B8);}
+.tiktok-badge{position:absolute;top:14px;right:-4px;background:#000;color:#fff;padding:.5rem .75rem .5rem .6rem;border-radius:2px;display:flex;align-items:center;gap:.45rem;text-decoration:none;font-family:'Cormorant Garamond',serif;box-shadow:0 6px 20px rgba(0,0,0,.25);z-index:3;transition:transform .3s;}
+.tiktok-badge:hover{transform:translateY(-2px);}
+.tiktok-badge svg{width:18px;height:18px;flex-shrink:0;}
+.tiktok-badge .tb-txt{display:flex;flex-direction:column;line-height:1.1;}
+.tiktok-badge .tb-lbl{font-size:.55rem;letter-spacing:.22em;color:#fe2c55;font-weight:600;text-transform:uppercase;}
+.tiktok-badge .tb-hdl{font-size:.7rem;letter-spacing:.03em;color:#fff;font-style:italic;}
+.hero-tiktok-row{max-width:365px;margin:1.1rem auto 0;animation:fu .7s .52s ease both;}
+.tiktok-embed-wrap{background:#fff;border:1px solid var(--border);border-radius:6px;padding:.6rem;box-shadow:0 4px 20px rgba(197,165,90,.08);}
+.tiktok-embed-wrap blockquote.tiktok-embed{margin:0 auto!important;max-width:100%!important;}
+.tiktok-cta{display:flex;align-items:center;justify-content:center;gap:.5rem;margin-top:.75rem;padding:.7rem 1rem;background:linear-gradient(90deg,#fe2c55,#25f4ee);color:#fff;text-decoration:none;border-radius:2px;font-size:.76rem;letter-spacing:.08em;font-weight:600;transition:opacity .3s;}
+.tiktok-cta:hover{opacity:.9;}
 .scroll-hint{text-align:center;padding:1.3rem 0 2.3rem;position:relative;z-index:2;animation:fu .7s .56s ease both;}
 .scroll-hint span{display:block;font-family:'Cormorant Garamond',serif;font-size:.67rem;letter-spacing:.35em;color:var(--gold);text-transform:uppercase;margin-bottom:.38rem;opacity:.7;}
 .arr{opacity:.4;animation:bnc 2s infinite;}
@@ -126,13 +137,23 @@ nav{position:fixed;top:34px;left:0;right:0;z-index:100;padding:.85rem 1.3rem;dis
 .wc h4{font-family:'Zen Old Mincho',serif;font-size:.95rem;margin-bottom:.42rem;}
 .wc p{font-size:.79rem;line-height:1.92;color:var(--ink-soft);}
 #cl{background:var(--white);}
-.reg{margin-bottom:2.2rem;}
+.cl-tabs{display:flex;gap:.4rem;margin-bottom:1.6rem;background:var(--cream2);padding:.35rem;border-radius:4px;border:1px solid var(--border);}
+.cl-tab{flex:1;background:transparent;border:none;padding:.65rem .4rem;font-family:'Noto Serif JP',serif;font-size:.78rem;color:var(--ink-soft);cursor:pointer;border-radius:2px;transition:all .25s;letter-spacing:.03em;}
+.cl-tab .cl-tab-en{display:block;font-family:'Cormorant Garamond',serif;font-size:.6rem;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-bottom:.2rem;}
+.cl-tab.active{background:var(--white);color:var(--ink);box-shadow:0 2px 8px rgba(197,165,90,.15);font-weight:500;}
+.cl-pane{display:none;}
+.cl-pane.active{display:block;animation:fade .4s ease;}
+@keyframes fade{from{opacity:0;}to{opacity:1;}}
+.reg{margin-bottom:1.2rem;}
 .rt{font-family:'Cormorant Garamond',serif;font-size:.73rem;letter-spacing:.33em;color:var(--gold);text-transform:uppercase;border-bottom:1px solid var(--border);padding-bottom:.5rem;margin-bottom:1rem;}
 .cll{list-style:none;}
-.ci2{padding:.75rem .5rem;border-bottom:1px solid var(--border2);display:flex;flex-direction:column;gap:.22rem;}
+.ci2{padding:1rem .5rem;border-bottom:1px solid var(--border2);display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;}
+.ci2-txt{display:flex;flex-direction:column;gap:.2rem;flex:1;min-width:0;}
 .cn{font-size:.85rem;color:var(--ink);font-weight:500;display:flex;align-items:center;gap:.55rem;}
 .cn::before{content:'◈';color:var(--gold);font-size:.56rem;flex-shrink:0;}
-.ca{font-size:.73rem;color:var(--ink-mute);padding-left:1.1rem;}
+.ca{font-size:.72rem;color:var(--ink-mute);padding-left:1.1rem;line-height:1.6;}
+.ci2-btn{background:var(--gold);color:#fff;font-size:.7rem;padding:.5rem .85rem;border-radius:2px;text-decoration:none;letter-spacing:.08em;font-family:'Noto Serif JP',serif;white-space:nowrap;transition:background .3s;flex-shrink:0;}
+.ci2-btn:hover{background:var(--gold-deep);}
 .ca::before{content:'◆ ';color:var(--gold);font-size:.48rem;position:relative;top:-2px;margin-right:.15em;}
 .rcimg{width:100%;max-width:320px;border-radius:6px;display:block;margin:0 auto 1.6rem;aspect-ratio:3/4;object-fit:cover;background:linear-gradient(135deg,#F5EDD8,#E8D8B8);}
 #cta{background:linear-gradient(148deg,#F9F2E0 0%,#EFE3C2 50%,#E8D9AE 100%);padding:5.5rem 1.4rem;position:relative;overflow:hidden;}
@@ -191,9 +212,13 @@ nav{position:fixed;top:34px;left:0;right:0;z-index:100;padding:.85rem 1.3rem;dis
 #event .td-date{font-family:'Playfair Display',serif;font-size:2rem;font-style:italic;font-weight:700;color:var(--gold);line-height:1;}
 #event .td-wd{font-size:.72rem;color:var(--ink-mute);letter-spacing:.15em;}
 #event .td-slots{display:flex;flex-direction:column;gap:.4rem;flex:1;}
-#event .td-slot{display:flex;align-items:center;gap:.65rem;background:var(--cream2);padding:.45rem .85rem;border-radius:2px;border:1px solid var(--border2);}
-#event .td-label{font-family:'Cormorant Garamond',serif;font-size:.66rem;color:var(--gold-deep);letter-spacing:.2em;min-width:34px;text-transform:uppercase;font-weight:600;}
-#event .td-time{font-family:'Cormorant Garamond',serif;font-size:.92rem;color:var(--ink);letter-spacing:.06em;flex:1;text-align:center;}
+#event .td-slot{display:flex;align-items:center;gap:.55rem;background:var(--cream2);padding:.45rem .7rem;border-radius:2px;border:1px solid var(--border2);}
+#event .td-label{font-family:'Cormorant Garamond',serif;font-size:.66rem;color:var(--gold-deep);letter-spacing:.2em;min-width:30px;text-transform:uppercase;font-weight:600;}
+#event .td-time{font-family:'Cormorant Garamond',serif;font-size:.88rem;color:var(--ink);letter-spacing:.06em;flex:1;text-align:center;}
+#event .av-badge{font-size:.68rem;letter-spacing:.06em;padding:.18rem .45rem;border-radius:2px;font-weight:700;min-width:56px;text-align:center;flex-shrink:0;}
+#event .av-ok{background:#E4F0E0;color:#3e7a2d;border:1px solid #bfd9b5;}
+#event .av-few{background:#FCECD5;color:#B06E1E;border:1px solid #f2c98c;}
+#event .av-full{background:#F5DAD6;color:#9C2F25;border:1px solid #e3a6a0;text-decoration:line-through;opacity:.85;}
 #event .slots-note{text-align:center;font-size:.76rem;color:var(--ink-soft);margin-top:1.5rem;letter-spacing:.04em;line-height:1.8;}
 #event .slots-note strong{color:#B8432E;font-weight:700;}
 #event .e-venue-sec{background:var(--white);}
@@ -216,6 +241,30 @@ nav{position:fixed;top:34px;left:0;right:0;z-index:100;padding:.85rem 1.3rem;dis
 #event .e-cta-sec p{font-size:.82rem;color:var(--ink-soft);margin-bottom:2rem;line-height:2;}
 #event .bg-cta{display:block;max-width:340px;margin:0 auto 1rem;background:var(--ink);color:#fff;text-decoration:none;padding:1.15rem;font-size:.88rem;letter-spacing:.12em;border-radius:2px;transition:all .3s;box-shadow:0 8px 30px rgba(44,37,32,.25);}
 #event .bg-cta:hover{background:var(--gold-deep);}
+#faq{background:var(--cream);}
+.faq-list{max-width:660px;margin:0 auto;display:flex;flex-direction:column;gap:.6rem;}
+.faq-item{background:var(--white);border:1px solid var(--border);border-radius:6px;overflow:hidden;}
+.faq-q{width:100%;text-align:left;background:transparent;border:none;padding:1.1rem 1.2rem;font-family:'Noto Serif JP',serif;font-size:.86rem;font-weight:500;color:var(--ink);cursor:pointer;display:flex;align-items:center;gap:.75rem;line-height:1.55;}
+.faq-q .faq-tag{font-family:'Playfair Display',serif;font-style:italic;color:var(--gold);font-size:.95rem;flex-shrink:0;min-width:24px;}
+.faq-q .faq-txt{flex:1;}
+.faq-q .faq-ic{width:18px;height:18px;position:relative;flex-shrink:0;transition:transform .3s;}
+.faq-q .faq-ic::before,.faq-q .faq-ic::after{content:'';position:absolute;background:var(--gold);}
+.faq-q .faq-ic::before{width:12px;height:1px;top:50%;left:3px;}
+.faq-q .faq-ic::after{width:1px;height:12px;top:3px;left:50%;transition:transform .3s;}
+.faq-item.open .faq-q .faq-ic::after{transform:rotate(90deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;padding:0 1.2rem;}
+.faq-item.open .faq-a{max-height:400px;padding:0 1.2rem 1.1rem 3rem;}
+.faq-a p{font-size:.8rem;line-height:2;color:var(--ink-soft);}
+.mobile-cta{position:fixed;bottom:0;left:0;right:0;z-index:150;background:rgba(253,251,247,.97);backdrop-filter:blur(14px);border-top:1px solid var(--border);padding:.55rem .6rem;display:flex;gap:.5rem;box-shadow:0 -4px 20px rgba(0,0,0,.08);}
+.mobile-cta a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.1rem;padding:.65rem .4rem;text-decoration:none;font-size:.72rem;letter-spacing:.04em;border-radius:2px;font-family:'Noto Serif JP',serif;transition:all .3s;line-height:1.2;}
+.mobile-cta .mc-sub{font-size:.58rem;letter-spacing:.15em;opacity:.85;font-family:'Cormorant Garamond',serif;font-style:italic;}
+.mobile-cta .mc-reg{background:var(--white);color:var(--gold-deep);border:1px solid var(--gold);font-weight:500;}
+.mobile-cta .mc-reg:hover{background:var(--cream2);}
+.mobile-cta .mc-event{background:var(--ink);color:#fff;font-weight:500;box-shadow:0 3px 12px rgba(44,37,32,.25);}
+.mobile-cta .mc-event:hover{background:var(--gold-deep);}
+.mobile-cta .mc-event .mc-sub{color:var(--gold-light);}
+@media(min-width:780px){.mobile-cta{display:none;}body{padding-bottom:0!important;}}
+@media(max-width:779px){body{padding-bottom:76px;}}
 footer{background:var(--cream2);padding:1.8rem 1.4rem;text-align:center;border-top:1px solid var(--border);}
 .fl2{font-family:'Cormorant Garamond',serif;font-size:.97rem;color:var(--gold-deep);letter-spacing:.15em;display:block;margin-bottom:.65rem;}
 footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-mute);letter-spacing:.08em;}
@@ -243,7 +292,22 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
     </div>
     <div class="hero-pw">
       <div class="hero-frame"></div>
-      <img src="https://seishokai.github.io/shift/lp-images/ran-hero.jpg" alt="らんちゃん" class="hero-img">
+      <a href="https://www.tiktok.com/@mermaidqueen1515" target="_blank" rel="noopener" class="tiktok-badge" aria-label="TikTok @mermaidqueen1515">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+        <span class="tb-txt"><span class="tb-lbl">TikTok</span><span class="tb-hdl">@mermaidqueen1515</span></span>
+      </a>
+      <img src="https://seishokai.github.io/shift/lp-images/ran-hero.jpg" alt="らんちゃん 本人" class="hero-img">
+    </div>
+    <div class="hero-tiktok-row">
+      <div class="tiktok-embed-wrap">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@mermaidqueen1515" data-unique-id="mermaidqueen1515" data-embed-type="creator" style="max-width:100%;min-width:288px;">
+          <section><a target="_blank" href="https://www.tiktok.com/@mermaidqueen1515">@mermaidqueen1515</a></section>
+        </blockquote>
+      </div>
+      <a href="https://www.tiktok.com/@mermaidqueen1515" target="_blank" rel="noopener" class="tiktok-cta">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.1z"/></svg>
+        らんちゃんの本人動画を見る
+      </a>
     </div>
     <div class="scroll-hint">
       <span>Scroll</span>
@@ -314,8 +378,8 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
             <div class="td-wd">WED</div>
           </div>
           <div class="td-slots">
-            <div class="td-slot"><span class="td-label">AM</span><span class="td-time">9:30 〜 13:30</span></div>
-            <div class="td-slot"><span class="td-label">PM</span><span class="td-time">14:30 〜 18:00</span></div>
+            <div class="td-slot"><span class="td-label">AM</span><span class="td-time">9:30 〜 13:30</span><span class="av-badge av-ok">◯ 空きあり</span></div>
+            <div class="td-slot"><span class="td-label">PM</span><span class="td-time">14:30 〜 18:00</span><span class="av-badge av-few">△ 残わずか</span></div>
           </div>
         </div>
         <div class="time-day">
@@ -324,11 +388,16 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
             <div class="td-wd">THU</div>
           </div>
           <div class="td-slots">
-            <div class="td-slot"><span class="td-label">AM</span><span class="td-time">9:30 〜 13:30</span></div>
-            <div class="td-slot"><span class="td-label">PM</span><span class="td-time">14:30 〜 18:00</span></div>
+            <div class="td-slot"><span class="td-label">AM</span><span class="td-time">9:30 〜 13:30</span><span class="av-badge av-few">△ 残わずか</span></div>
+            <div class="td-slot"><span class="td-label">PM</span><span class="td-time">14:30 〜 18:00</span><span class="av-badge av-ok">◯ 空きあり</span></div>
           </div>
         </div>
-        <p class="slots-note">上記の時間帯のうち、<strong>1時間に1枠のみ</strong> ご予約いただけます<br>※ 先着順・埋まり次第終了</p>
+        <div class="av-legend" style="display:flex;justify-content:center;gap:.9rem;margin-top:1.1rem;font-size:.68rem;color:var(--ink-mute);letter-spacing:.05em;flex-wrap:wrap;">
+          <span><span style="color:#3e7a2d;">◯</span> 空きあり</span>
+          <span><span style="color:#B06E1E;">△</span> 残わずか</span>
+          <span><span style="color:#9C2F25;">✗</span> 満席</span>
+        </div>
+        <p class="slots-note">上記の時間帯のうち、<strong>1時間に1枠のみ</strong> ご予約いただけます<br>※ 空き状況はリアルタイムではありません ／ 先着順・埋まり次第終了</p>
       </div>
     </div>
   </div>
@@ -344,15 +413,15 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
         <div class="flow-step">
           <div class="flow-num">01</div>
           <div class="flow-body">
-            <h4>ご来院・受付<span class="flow-time">5分</span></h4>
-            <p>予約時間に合わせてご来院ください。受付にて簡単な問診票をご記入いただきます。</p>
+            <h4>ご来院・らんちゃんがお出迎え<span class="flow-time">5分</span></h4>
+            <p>予約時間に合わせてご来院ください。受付にて <strong>らんちゃんがお出迎え</strong> し、緊張しないよう簡単にご案内します。問診票もその場でサポートいたします。</p>
           </div>
         </div>
         <div class="flow-step">
           <div class="flow-num">02</div>
           <div class="flow-body">
-            <h4>お悩み・ご希望のヒアリング<span class="flow-time">10分</span></h4>
-            <p>歯並び・歯の色・クリーニングなど、気になっていることをお伺いします。ご希望や予算感もお気軽にお話しください。</p>
+            <h4>らんちゃん同席のヒアリング<span class="flow-time">10分</span></h4>
+            <p>カウンセリングには <strong>らんちゃんが同席</strong> し、歯並び・歯の色・クリーニングなど気になっていることをじっくりお伺いします。ご希望や予算感もお気軽にお話しください。</p>
           </div>
         </div>
         <div class="flow-step">
@@ -416,6 +485,46 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
       <p>矯正・審美・インプラントすべての治療に精通しており、あなたに合ったプランを一緒に考えるパートナーでありたいと思っています。</p>
       <div class="sb">歯並びや歯の色のお悩みは、多くの方が長年抱えているものです。専門医による正確な診断を受けることで、想像よりも早く解決できるケースが少なくありません。まずは無料カウンセリングで、現在の状態を把握することから始めませんか。
         <div class="sbl"><div class="sav"></div><span class="sn">らんちゃん — Dental Hygienist</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="faq" class="sec gold-top">
+  <div class="si">
+    <div class="rv"><span class="sl">FAQ</span><h2 class="st">よくある<em>ご質問</em></h2></div>
+    <div class="gsep rv d1"><span>◈</span></div>
+    <div class="faq-list rv d2">
+      <div class="faq-item">
+        <button class="faq-q" type="button"><span class="faq-tag">Q1</span><span class="faq-txt">無料カウンセリングでは、何をしますか？</span><span class="faq-ic"></span></button>
+        <div class="faq-a"><p>お悩みのヒアリング、口腔内の簡単なチェック、治療プランとお見積もりのご提案を行います。所要時間は約45〜60分です。その場でのご契約は不要で、ご自宅でじっくりご検討いただけます。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button"><span class="faq-tag">Q2</span><span class="faq-txt">当日に治療を始めることはできますか？</span><span class="faq-ic"></span></button>
+        <div class="faq-a"><p>カウンセリング当日は診断と治療方針のご提案まで行います。実際の治療は後日、ご検討の上でご希望いただいた日程からスタートとなります。即日契約・即日治療はお願いしておりません。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button"><span class="faq-tag">Q3</span><span class="faq-txt">支払い方法・分割払いには対応していますか？</span><span class="faq-ic"></span></button>
+        <div class="faq-a"><p>現金・各種クレジットカードに加え、デンタルローン（分割払い）にも対応しております。月々のご負担額のシミュレーションもカウンセリング時にお出しできますので、お気軽にご相談ください。※ デンタルローンは審査がございます。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button"><span class="faq-tag">Q4</span><span class="faq-txt">矯正治療中の食事や歯磨きに制限はありますか？</span><span class="faq-ic"></span></button>
+        <div class="faq-a"><p>表側・裏側矯正の場合は、粘着性の強い食品など一部注意が必要なものがあります。マウスピース矯正は取り外して食事・歯磨きができるため、制限はほとんどありません。詳しくは診断時にご説明いたします。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button"><span class="faq-tag">Q5</span><span class="faq-txt">治療期間はどれくらいかかりますか？</span><span class="faq-ic"></span></button>
+        <div class="faq-a"><p>症例により異なりますが、矯正はおよそ1年〜2年半が目安です。スピード矯正オプション（寿谷法）を併用することで、治療期間を大幅に短縮できる場合もあります。審美（ベニア）は通常2〜3回のご来院で完了します。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button"><span class="faq-tag">Q6</span><span class="faq-txt">予約のキャンセルや変更はできますか？</span><span class="faq-ic"></span></button>
+        <div class="faq-a"><p>前日までにご連絡いただければ、キャンセル・日程変更は無料で承ります。やむを得ない当日キャンセルの場合もまずはお電話・LINE等でご連絡ください。5/21・22 の限定イベントは枠数が限られているため、早めのご連絡にご協力をお願いいたします。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button"><span class="faq-tag">Q7</span><span class="faq-txt">他院からの転院や、治療途中の相談も可能ですか？</span><span class="faq-ic"></span></button>
+        <div class="faq-a"><p>もちろん可能です。他院での治療内容やレントゲンをお持ちいただければ、現状を確認した上で今後の方針をご提案いたします。無理に治療方針を変更することはありませんのでご安心ください。</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button"><span class="faq-tag">Q8</span><span class="faq-txt">当日の持ち物はありますか？</span><span class="faq-ic"></span></button>
+        <div class="faq-a"><p>特にございません。他院の資料（レントゲン・治療計画書など）をお持ちであれば参考にさせていただきますが、手ぶらでのご来院で問題ございません。身分証明書も不要です。</p></div>
       </div>
     </div>
   </div>
@@ -546,33 +655,36 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
   <div class="si">
     <div class="rv"><span class="sl">Clinics</span><h2 class="st">全国<em>11医院</em>展開中</h2></div>
     <div class="gsep rv d1"><span>◈</span></div>
-    <img src="https://seishokai.github.io/shift/lp-images/ran-pro.jpg" alt="らんちゃん" class="rcimg rv d2">
-    <div class="reg rv d2">
-      <p class="rt">Tokyo — 東京</p>
+    <p style="text-align:center;font-size:.8rem;color:var(--ink-soft);margin-bottom:1.3rem;">お住まいの地域からお選びください</p>
+    <div class="cl-tabs rv d1">
+      <button class="cl-tab active" type="button" data-region="tokyo"><span class="cl-tab-en">Tokyo</span>東京</button>
+      <button class="cl-tab" type="button" data-region="nagoya"><span class="cl-tab-en">Nagoya · Aichi</span>名古屋・愛知</button>
+      <button class="cl-tab" type="button" data-region="kyoto"><span class="cl-tab-en">Kyoto</span>京都</button>
+    </div>
+    <div class="cl-pane active rv d2" data-region="tokyo">
       <ul class="cll">
-        <li class="ci2"><span class="cn">BF銀座歯科・矯正歯科</span><span class="ca">東京メトロ銀座駅 徒歩3分</span></li>
-        <li class="ci2"><span class="cn">大森駅ファミリー歯科・矯正歯科</span><span class="ca">JR大森駅 徒歩1分</span></li>
+        <li class="ci2"><div class="ci2-txt"><span class="cn">BF銀座歯科・矯正歯科</span><span class="ca">東京メトロ銀座駅 徒歩3分</span></div><a href="https://reserve.shareconnect.co.jp/?r=tb4d11&treatment_ids=1766627271947%2C1767579807369%2C1766627284554%2C1766641212044%2C1766627335021" target="_blank" rel="noopener" class="ci2-btn">予約する</a></li>
+        <li class="ci2"><div class="ci2-txt"><span class="cn">大森駅ファミリー歯科・矯正歯科</span><span class="ca">JR大森駅 徒歩1分</span></div><a href="https://reserve.shareconnect.co.jp/?r=tb4d11&treatment_ids=1766627271947%2C1767579807369%2C1766627284554%2C1766641212044%2C1766627335021" target="_blank" rel="noopener" class="ci2-btn">予約する</a></li>
       </ul>
     </div>
-    <div class="reg rv d2">
-      <p class="rt">Nagoya / Aichi — 名古屋・愛知</p>
+    <div class="cl-pane rv d2" data-region="nagoya">
       <ul class="cll">
-        <li class="ci2"><span class="cn">エスカ歯科・矯正歯科</span><span class="ca">JR名古屋駅 新幹線口 徒歩1分 ／ エスカ地下街内</span></li>
-        <li class="ci2"><span class="cn">名駅アール歯科・矯正歯科</span><span class="ca">JR名古屋駅 徒歩1分 ／ 名駅IMAIビル11F</span></li>
-        <li class="ci2"><span class="cn">名古屋ウィズ歯科・矯正歯科</span><span class="ca">JR名古屋駅 徒歩1分</span></li>
-        <li class="ci2"><span class="cn">名古屋ルミナス歯科・矯正歯科</span><span class="ca">地下鉄鶴舞線 黄金駅 徒歩すぐ</span></li>
-        <li class="ci2"><span class="cn">名古屋茶屋歯科・矯正歯科</span><span class="ca">地下鉄名港線 東海通駅 ／ イオンモール名古屋茶屋1F</span></li>
-        <li class="ci2"><span class="cn">名古屋やごと歯科・矯正歯科</span><span class="ca">地下鉄鶴舞線 八事駅 ／ イオン八事店内</span></li>
-        <li class="ci2"><span class="cn">アピタ知立ファミリー歯科・矯正歯科</span><span class="ca">名鉄三河線 知立駅 徒歩5分 ／ ギャラリエアピタ知立店2F</span></li>
-        <li class="ci2"><span class="cn">ワイズ歯科矯正歯科＋KIDS</span><span class="ca">名鉄小牧線 小牧駅 ／ イオンモール小牧店内</span></li>
+        <li class="ci2"><div class="ci2-txt"><span class="cn">エスカ歯科・矯正歯科</span><span class="ca">JR名古屋駅 新幹線口 徒歩1分 ／ エスカ地下街内</span></div><a href="https://reserve.shareconnect.co.jp/?r=tb4d11&treatment_ids=1766627271947%2C1767579807369%2C1766627284554%2C1766641212044%2C1766627335021" target="_blank" rel="noopener" class="ci2-btn">予約する</a></li>
+        <li class="ci2"><div class="ci2-txt"><span class="cn">名駅アール歯科・矯正歯科</span><span class="ca">JR名古屋駅 徒歩1分 ／ 名駅IMAIビル11F</span></div><a href="https://reserve.shareconnect.co.jp/?r=tb4d11&treatment_ids=1766627271947%2C1767579807369%2C1766627284554%2C1766641212044%2C1766627335021" target="_blank" rel="noopener" class="ci2-btn">予約する</a></li>
+        <li class="ci2"><div class="ci2-txt"><span class="cn">名古屋ウィズ歯科・矯正歯科</span><span class="ca">JR名古屋駅 徒歩1分</span></div><a href="https://reserve.shareconnect.co.jp/?r=tb4d11&treatment_ids=1766627271947%2C1767579807369%2C1766627284554%2C1766641212044%2C1766627335021" target="_blank" rel="noopener" class="ci2-btn">予約する</a></li>
+        <li class="ci2"><div class="ci2-txt"><span class="cn">名古屋ルミナス歯科・矯正歯科</span><span class="ca">地下鉄鶴舞線 黄金駅 徒歩すぐ</span></div><a href="https://reserve.shareconnect.co.jp/?r=tb4d11&treatment_ids=1766627271947%2C1767579807369%2C1766627284554%2C1766641212044%2C1766627335021" target="_blank" rel="noopener" class="ci2-btn">予約する</a></li>
+        <li class="ci2"><div class="ci2-txt"><span class="cn">名古屋茶屋歯科・矯正歯科</span><span class="ca">地下鉄名港線 東海通駅 ／ イオンモール名古屋茶屋1F</span></div><a href="https://reserve.shareconnect.co.jp/?r=tb4d11&treatment_ids=1766627271947%2C1767579807369%2C1766627284554%2C1766641212044%2C1766627335021" target="_blank" rel="noopener" class="ci2-btn">予約する</a></li>
+        <li class="ci2"><div class="ci2-txt"><span class="cn">名古屋やごと歯科・矯正歯科</span><span class="ca">地下鉄鶴舞線 八事駅 ／ イオン八事店内</span></div><a href="https://reserve.shareconnect.co.jp/?r=tb4d11&treatment_ids=1766627271947%2C1767579807369%2C1766627284554%2C1766641212044%2C1766627335021" target="_blank" rel="noopener" class="ci2-btn">予約する</a></li>
+        <li class="ci2"><div class="ci2-txt"><span class="cn">アピタ知立ファミリー歯科・矯正歯科</span><span class="ca">名鉄三河線 知立駅 徒歩5分 ／ ギャラリエアピタ知立店2F</span></div><a href="https://reserve.shareconnect.co.jp/?r=tb4d11&treatment_ids=1766627271947%2C1767579807369%2C1766627284554%2C1766641212044%2C1766627335021" target="_blank" rel="noopener" class="ci2-btn">予約する</a></li>
+        <li class="ci2"><div class="ci2-txt"><span class="cn">ワイズ歯科矯正歯科＋KIDS</span><span class="ca">名鉄小牧線 小牧駅 ／ イオンモール小牧店内</span></div><a href="https://reserve.shareconnect.co.jp/?r=tb4d11&treatment_ids=1766627271947%2C1767579807369%2C1766627284554%2C1766641212044%2C1766627335021" target="_blank" rel="noopener" class="ci2-btn">予約する</a></li>
       </ul>
     </div>
-    <div class="reg rv d3">
-      <p class="rt">Kyoto — 京都</p>
+    <div class="cl-pane rv d2" data-region="kyoto">
       <ul class="cll">
-        <li class="ci2"><span class="cn">京都河原町スマイルデザイン歯科・矯正歯科</span><span class="ca">阪急京都線 京都河原町駅 徒歩2分 ／ AD-G四条河原町6F</span></li>
+        <li class="ci2"><div class="ci2-txt"><span class="cn">京都河原町スマイルデザイン歯科・矯正歯科</span><span class="ca">阪急京都線 京都河原町駅 徒歩2分 ／ AD-G四条河原町6F</span></div><a href="https://reserve.shareconnect.co.jp/?r=tb4d11&treatment_ids=1766627271947%2C1767579807369%2C1766627284554%2C1766641212044%2C1766627335021" target="_blank" rel="noopener" class="ci2-btn">予約する</a></li>
       </ul>
     </div>
+    <img src="https://seishokai.github.io/shift/lp-images/ran-pro.jpg" alt="らんちゃん" class="rcimg rv d3" style="margin-top:2rem;">
   </div>
 </section>
 <section id="cta">
@@ -597,9 +709,37 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
   <span class="fl2">医療法人清翔会 Seishokai Dental Group</span>
   <p>© 2025 Seishokai Dental Group. All rights reserved.</p>
 </footer>
+
+<div class="mobile-cta">
+  <a href="https://reserve.shareconnect.co.jp/?r=tb4d11&treatment_ids=1766627271947%2C1767579807369%2C1766627284554%2C1766641212044%2C1766627335021" target="_blank" rel="noopener" class="mc-reg">
+    <span class="mc-sub">Regular</span>
+    通常予約
+  </a>
+  <a href="https://reserve.shareconnect.co.jp/?r=i3rlgb&treatment_ids=1776529038261%2C1776529022259" target="_blank" rel="noopener" class="mc-event">
+    <span class="mc-sub">5/21・22 限定</span>
+    イベント予約
+  </a>
+</div>
 <script>
 const obs=new IntersectionObserver(e=>e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')}),{threshold:0.1});
 document.querySelectorAll('.rv').forEach(e=>obs.observe(e));
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    btn.closest('.faq-item').classList.toggle('open');
+  });
+});
+
+// Clinics tabs
+document.querySelectorAll('.cl-tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    const region=tab.dataset.region;
+    document.querySelectorAll('.cl-tab').forEach(t=>t.classList.toggle('active',t===tab));
+    document.querySelectorAll('.cl-pane').forEach(p=>p.classList.toggle('active',p.dataset.region===region));
+  });
+});
 </script>
+<script async src="https://www.tiktok.com/embed.js"></script>
 </body>
 </html>
