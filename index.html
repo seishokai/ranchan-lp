@@ -72,7 +72,8 @@ nav{position:fixed;top:34px;left:0;right:0;z-index:100;padding:.85rem 1.3rem;dis
 .pc{background:var(--white);padding:1.5rem;}
 .pch{background:linear-gradient(135deg,#F9F3E4 0%,#F2E8CC 100%);border-top:2px solid var(--gold);}
 .pch .pn{color:var(--gold-deep);}.pch .pd{color:var(--ink-soft);}.pch .pf{color:var(--gold-deep);}
-.pn{font-family:'Zen Old Mincho',serif;font-size:.98rem;font-weight:700;color:var(--ink);margin-bottom:.44rem;}
+.pn{font-family:'Zen Old Mincho',serif;font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:.5rem;display:flex;align-items:baseline;gap:.65rem;}
+.pnum{font-family:'Playfair Display',serif;font-style:italic;font-size:.78rem;color:var(--gold);letter-spacing:.1em;font-weight:400;flex-shrink:0;}
 .ptag{display:inline-block;background:var(--gold);color:#fff;font-size:.61rem;letter-spacing:.05em;padding:.17rem .5rem;border-radius:2px;margin-left:.38rem;vertical-align:middle;font-family:'Cormorant Garamond',serif;}
 .pd{font-size:.8rem;line-height:1.87;color:var(--ink-soft);}
 .pf{font-size:.75rem;color:var(--gold-deep);margin-top:.64rem;}
@@ -120,8 +121,8 @@ nav{position:fixed;top:34px;left:0;right:0;z-index:100;padding:.85rem 1.3rem;dis
 .il li::before{content:'✦';color:var(--gold);flex-shrink:0;margin-top:.3rem;font-size:.52rem;}
 #wh{background:var(--cream2);}
 .wcs{display:grid;grid-template-columns:1fr;gap:.9rem;margin-top:1.7rem;}
-.wc{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.3rem;display:flex;gap:.9rem;align-items:flex-start;}
-.wi{font-size:1.65rem;flex-shrink:0;}
+.wc{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.3rem;display:flex;gap:1rem;align-items:flex-start;}
+.wi{font-family:'Playfair Display',serif;font-style:italic;font-size:1.45rem;color:var(--gold);flex-shrink:0;line-height:1;padding-top:.3rem;min-width:30px;}
 .wc h4{font-family:'Zen Old Mincho',serif;font-size:.95rem;margin-bottom:.42rem;}
 .wc p{font-size:.79rem;line-height:1.92;color:var(--ink-soft);}
 #cl{background:var(--white);}
@@ -132,7 +133,7 @@ nav{position:fixed;top:34px;left:0;right:0;z-index:100;padding:.85rem 1.3rem;dis
 .cn{font-size:.85rem;color:var(--ink);font-weight:500;display:flex;align-items:center;gap:.55rem;}
 .cn::before{content:'◈';color:var(--gold);font-size:.56rem;flex-shrink:0;}
 .ca{font-size:.73rem;color:var(--ink-mute);padding-left:1.1rem;}
-.ca::before{content:'🚉 ';font-size:.68rem;}
+.ca::before{content:'◆ ';color:var(--gold);font-size:.48rem;position:relative;top:-2px;margin-right:.15em;}
 .rcimg{width:100%;max-width:320px;border-radius:6px;display:block;margin:0 auto 1.6rem;aspect-ratio:3/4;object-fit:cover;background:linear-gradient(135deg,#F5EDD8,#E8D8B8);}
 #cta{background:linear-gradient(148deg,#F9F2E0 0%,#EFE3C2 50%,#E8D9AE 100%);padding:5.5rem 1.4rem;position:relative;overflow:hidden;}
 #cta::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
@@ -226,8 +227,8 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
   <div class="hero-word">Smile</div>
   <div class="hero-body">
     <p class="hero-ey">Seishokai Dental Group</p>
-    <h1 class="hero-h1">一生モノの笑顔を、<br>あなたと一緒に。<br><span class="g">清翔会</span>の審美歯科。</h1>
-    <p class="hero-sub">看板歯科衛生士「らんちゃん」が、<br>矯正・審美・インプラントのすべてをご案内します。</p>
+    <h1 class="hero-h1">一生続く美しい笑顔を、<br>あなたと共に。<br><span class="g">清翔会</span>の審美歯科。</h1>
+    <p class="hero-sub">看板歯科衛生士「らんちゃん」が、<br>矯正・審美・インプラント治療をわかりやすくご案内します。</p>
     <div class="badges">
       <span class="badge">Black Film 次世代ベニア</span>
       <span class="badge">インプラント 17万円〜</span>
@@ -281,8 +282,7 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
       <div class="mcard rv d2">
         <span class="mno">02</span>
         <h3>自費クリーニング 相談会</h3>
-        <p class="price-line">保険外クリーニングを詳しくご紹介</p>
-        <p>保険診療では落としきれない着色・ステイン・歯石を、自費ならではの機材と時間で徹底ケア。当日、実際のメニュー内容や施術時間をお伝えします。</p>
+        <p>保険診療では落としきれない着色・ステイン・歯石を、自費診療ならではの機材と時間をかけて徹底的にケアします。当日は、実際のメニュー内容・施術時間・費用について詳しくご説明いたします。</p>
         <ul>
           <li>エアフロー（ステイン・プラーク除去）</li>
           <li>PMTC（ツルツルの仕上げ磨き）</li>
@@ -356,7 +356,7 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
 </section>
 <section id="prof" class="gold-top">
   <div class="si">
-    <div class="rv"><span class="sl">Profile</span><h2 class="st">らんちゃんって、<em>誰？</em></h2></div>
+    <div class="rv"><span class="sl">Profile</span><h2 class="st">看板歯科衛生士<em>のご紹介</em></h2></div>
     <div class="gsep rv d1"><span>◈</span></div>
     <div class="pgrid rv d2">
       <img src="https://seishokai.github.io/shift/lp-images/ran-smile.jpg" alt="らんちゃん 笑顔" class="pimg">
@@ -366,7 +366,7 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
       <h3>医療法人清翔会 看板歯科衛生士</h3>
       <p>歯科衛生士として日々患者様と向き合う中で、「歯の悩みを気軽に相談できる場所があればいいのに」という想いから、清翔会の魅力を発信しています。</p>
       <p>矯正・審美・インプラントすべての治療に精通しており、あなたに合ったプランを一緒に考えるパートナーでありたいと思っています。</p>
-      <div class="sb">歯並びや歯の色って、コンプレックスになりがちですよね。でも、ちゃんと相談できる場所さえ見つかれば、意外と早く解決できることが多いんです。まずは気軽に話しかけてください♪
+      <div class="sb">歯並びや歯の色のお悩みは、多くの方が長年抱えているものです。専門医による正確な診断を受けることで、想像よりも早く解決できるケースが少なくありません。まずは無料カウンセリングで、現在の状態を把握することから始めませんか。
         <div class="sbl"><div class="sav"></div><span class="sn">らんちゃん — Dental Hygienist</span></div>
       </div>
     </div>
@@ -377,10 +377,10 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
     <div class="rv"><span class="sl">Orthodontics</span><h2 class="st">選べる<em>4つの矯正</em>プラン</h2></div>
     <div class="gsep rv d1"><span>◈</span></div>
     <div class="pgrd rv d2">
-      <div class="pc"><div class="pn">🦷 表側矯正</div><p class="pd">スタンダードで確実な矯正方法。ブラケットを歯の表面に装着するオーソドックスな手法で、あらゆる症例に対応できます。</p><p class="pf">費用を抑えながら確実に歯並びを改善</p></div>
-      <div class="pc"><div class="pn">🌙 裏側矯正（フルリンガル）</div><p class="pd">上下すべての歯の裏側にブラケットを装着する完全見えない矯正。接客業や人前に出るお仕事の方に特に人気です。</p><p class="pf">見た目を気にせず本格矯正したい方に</p></div>
-      <div class="pc"><div class="pn">✨ ハーフリンガル矯正</div><p class="pd">上の歯は裏側、下の歯は表側に装着するハイブリッド型。フルリンガルより費用を抑えつつ、笑ったときに目立たない人気プランです。</p><p class="pf">コストと見た目のバランス重視の方に</p></div>
-      <div class="pc"><div class="pn">💎 マウスピース矯正</div><p class="pd">透明なマウスピースを使用した取り外し可能な矯正。食事や歯磨きも普段通りにでき、ライフスタイルへの負担が少ない選択肢です。</p><p class="pf">ライフスタイルに合わせて選べる</p></div>
+      <div class="pc"><div class="pn"><span class="pnum">01</span>表側矯正</div><p class="pd">ブラケットを歯の表面に装着する、もっともスタンダードな矯正方法です。幅広い症例に対応でき、治療実績も豊富なため、確実性を重視される方に選ばれています。</p><p class="pf">費用を抑えて確実に歯並びを整えたい方に</p></div>
+      <div class="pc"><div class="pn"><span class="pnum">02</span>裏側矯正（フルリンガル）</div><p class="pd">上下すべての歯の裏側に装置を装着します。正面から装置が一切見えないため、接客業や人前に出るお仕事の方に多く選ばれている矯正法です。</p><p class="pf">装置を一切見せずに矯正したい方に</p></div>
+      <div class="pc"><div class="pn"><span class="pnum">03</span>ハーフリンガル矯正</div><p class="pd">上の歯は裏側、下の歯は表側に装着するハイブリッド方式。フルリンガルに比べ費用を抑えつつ、会話や笑顔の際に装置が目立ちにくい、バランスの取れたプランです。</p><p class="pf">費用と目立ちにくさの両立を望まれる方に</p></div>
+      <div class="pc"><div class="pn"><span class="pnum">04</span>マウスピース矯正</div><p class="pd">透明なマウスピースを用いた取り外し可能な矯正です。食事や歯磨きをこれまで通り行えるため、ライフスタイルへの影響を最小限に抑えたい方に適しています。</p><p class="pf">生活スタイルを変えずに矯正したい方に</p></div>
     </div>
     <div class="ab rv d2" style="margin-top:1.6rem;">
       <div class="ah"><div class="aen">Speed Option</div><div class="ajp">スピード矯正オプション — 寿谷法コルチコトミー併用</div></div>
@@ -390,8 +390,8 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
         <ul class="fl"><li>「早く終わらせたい」方に最適なオプション</li><li>経験豊富な専門医による安全な施術</li><li>表側・裏側・マウスピース全てと組み合わせ可能</li></ul>
       </div>
     </div>
-    <div class="sb rv d3">矯正って「時間がかかるから…」とためらう方が多いんですが、スピード矯正オプションを使えば期間を大幅に短縮できるんです！忙しい方でもあきらめないでほしいな、と思っています。
-      <div class="sbl"><div class="sav"></div><span class="sn">らんちゃんの矯正アドバイス</span></div>
+    <div class="sb rv d3">治療期間の長さを理由に矯正をためらわれる方は少なくありません。清翔会の「スピード矯正オプション」であれば、従来の矯正に比べ治療期間を大幅に短縮でき、お仕事や学業との両立がしやすくなります。
+      <div class="sbl"><div class="sav"></div><span class="sn">清翔会 矯正担当より</span></div>
     </div>
   </div>
 </section>
@@ -401,12 +401,14 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
     <div class="gsep rv d1"><span>◈</span></div>
     <div class="ab rv d2">
       <div class="ah"><div class="aen">Black Film</div><div class="ajp">ブラックフィルム — 韓国発・セラミックベニア</div></div>
-      <img src="https://seishokai.github.io/shift/30.jpg" alt="BF Before/After" class="case-hero">
+      <img src="https://blackfilmhikaru.tkm-koike.workers.dev/img/case01.jpg" alt="Black Film 症例1 Before・After" class="case-hero">
       <div class="case-grid">
-        <img src="https://seishokai.github.io/shift/20.jpg" alt="すき歯症例"><img src="https://seishokai.github.io/shift/40.jpg" alt="韓国アイドル風">
-        <img src="https://seishokai.github.io/shift/60.jpg" alt="美しい歯"><img src="https://seishokai.github.io/shift/90.jpg" alt="Before/After">
+        <img src="https://blackfilmhikaru.tkm-koike.workers.dev/img/case02_before.jpg" alt="症例2 Before">
+        <img src="https://blackfilmhikaru.tkm-koike.workers.dev/img/case02_after.jpg" alt="症例2 After">
+        <img src="https://blackfilmhikaru.tkm-koike.workers.dev/img/case03_1.jpg" alt="症例3 Before・After">
+        <img src="https://blackfilmhikaru.tkm-koike.workers.dev/img/case03_2.jpg" alt="症例3 詳細">
       </div>
-      <p class="case-label">症例写真 ／ Before・After実例</p>
+      <p class="case-label">症例写真 ／ Before・After実例<br><span style="font-size:.62rem;color:var(--ink-mute);">※ モニター患者様の症例写真です。個人差があります。</span></p>
       <div class="abody">
         <p>歯科技工士による完全手作業で製作された<strong>0.1mmの超薄型セラミックベニア</strong>。韓国で2016年から80,000件以上の臨床実績。スマイルデザイン（顔分析）により理想の笑顔を設計します。</p>
         <div class="aes-tags"><span class="aes-tag">歯を削らない</span><span class="aes-tag">最薄0.1mm</span><span class="aes-tag">完全手作業</span><span class="aes-tag">韓国80,000件以上</span><span class="aes-tag">保証10年</span></div>
@@ -449,14 +451,14 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
         </tbody>
       </table>
     </div>
-    <div class="sb rv d3">「歯を削るのが怖い」という声をよく聞きます。Black FilmもラブリエもNO-PREP（歯を削らない）が基本。今の歯を守りながら理想の笑顔が手に入ります♡
-      <div class="sbl"><div class="sav"></div><span class="sn">らんちゃんの審美アドバイス</span></div>
+    <div class="sb rv d3">「健康な歯を削るのは避けたい」というお声を多くいただきます。Black Film・ラブリエはいずれも NO-PREP（歯を削らない）を基本とし、現在の歯の健康を守りながら、理想の仕上がりを実現する治療です。
+      <div class="sbl"><div class="sav"></div><span class="sn">清翔会 審美担当より</span></div>
     </div>
   </div>
 </section>
 <section id="imp" class="sec">
   <div class="si">
-    <div class="rv"><span class="sl">Implant</span><h2 class="st">清翔会<em>あんしん</em>インプラント</h2></div>
+    <div class="rv"><span class="sl">Implant</span><h2 class="st">清翔会の<em>安心</em>インプラント</h2></div>
     <div class="iprow rv d1">
       <img src="https://seishokai.github.io/shift/lp-images/ran-smile-pro.jpg" alt="らんちゃん" class="ipimg">
       <img src="https://seishokai.github.io/shift/lp-images/ran-uniform.jpg" alt="らんちゃん" class="ipimg">
@@ -473,8 +475,8 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
       <li>術後のメンテナンスも清翔会スタッフが徹底サポート</li>
       <li>分割払い・デンタルローン対応（要審査）</li>
     </ul>
-    <div class="sb rv d3">インプラントは「高い」「怖い」というイメージが強いですよね。でも清翔会なら大手法人の安心感と驚くほどリーズナブルな価格を両立できています。まずは相談だけでも！
-      <div class="sbl"><div class="sav"></div><span class="sn">らんちゃんのインプラントアドバイス</span></div>
+    <div class="sb rv d3">インプラント治療に「高額」「不安」といったイメージをお持ちの方は多くいらっしゃいます。医療法人清翔会では、全国11医院で培った確かな実績と、統一された治療プロトコルによって、確かな品質と明瞭な費用の両立を実現しています。
+      <div class="sbl"><div class="sav"></div><span class="sn">清翔会 インプラント担当より</span></div>
     </div>
   </div>
 </section>
@@ -483,12 +485,12 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
     <div class="rv"><span class="sl">Whitening &amp; Maintenance</span><h2 class="st"><em>ホワイトニング</em>と定期メンテ</h2></div>
     <div class="gsep rv d1"><span>◈</span></div>
     <div class="wcs rv d2">
-      <div class="wc"><div class="wi">✨</div><div><h4>らんちゃん厳選ホワイトニング</h4><p>オフィス・ホーム・コンビネーションなど、ライフスタイルに合わせてプランをご提案。コーヒーや紅茶の着色も驚くほど白く。</p></div></div>
-      <div class="wc"><div class="wi">🦷</div><div><h4>定期検診で美しさをキープ</h4><p>クリーニング・歯石除去・フッ素塗布など、らんちゃんが責任を持って担当します。</p></div></div>
-      <div class="wc"><div class="wi">💬</div><div><h4>オーラルケアカウンセリング</h4><p>ブラッシング指導から食生活アドバイスまで。口腔内全体の健康を長期的にサポートします。</p></div></div>
+      <div class="wc"><div class="wi">01</div><div><h4>ホワイトニング</h4><p>オフィス・ホーム・コンビネーションの3種類から、お口の状態とライフスタイルに合わせて最適なプランをご提案します。コーヒーや紅茶による着色も、透明感のある白さへと導きます。</p></div></div>
+      <div class="wc"><div class="wi">02</div><div><h4>定期検診・メンテナンス</h4><p>クリーニング・歯石除去・フッ素塗布などを、経験豊富な歯科衛生士が担当します。治療後の状態を長期的に維持するための大切なケアです。</p></div></div>
+      <div class="wc"><div class="wi">03</div><div><h4>オーラルケアカウンセリング</h4><p>ブラッシング指導から食生活のアドバイスまで。一人ひとりのお口の状態に合わせたケア方法をお伝えし、口腔全体の健康を長期的にサポートします。</p></div></div>
     </div>
-    <div class="sb rv d3">「ホワイトニング、どれにしたらいいかわからない」という方が多いです。一緒に理想の白さを見つけましょう！
-      <div class="sbl"><div class="sav"></div><span class="sn">らんちゃんのホワイトニングアドバイス</span></div>
+    <div class="sb rv d3">ホワイトニングは種類が多く、どれを選ぶべきか迷われる方がほとんどです。お口の状態・ご希望の白さ・ライフスタイルを丁寧に伺った上で、最適なプランを担当スタッフがご提案いたします。
+      <div class="sbl"><div class="sav"></div><span class="sn">清翔会 ホワイトニング担当より</span></div>
     </div>
   </div>
 </section>
@@ -545,7 +547,7 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
 </section>
 <footer>
   <span class="fl2">医療法人清翔会 Seishokai Dental Group</span>
-  <p>© 2024 Seishokai Dental Group. All rights reserved.</p>
+  <p>© 2025 Seishokai Dental Group. All rights reserved.</p>
 </footer>
 <script>
 const obs=new IntersectionObserver(e=>e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')}),{threshold:0.1});
