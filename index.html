@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>らんちゃんの審美歯科 | 医療法人清翔会</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Serif+JP:wght@300;400;500;700&family=Zen+Old+Mincho:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#C5A55A;--gold-light:#E8D5A0;--gold-deep:#9C7D3A;
+  --cream:#FDFBF7;--cream2:#F8F3EA;--white:#FFFFFF;
+  --ink:#2C2520;--ink-soft:#5A4E46;--ink-mute:#9A8C82;
+  --border:rgba(197,165,90,0.2);--border2:rgba(197,165,90,0.12);
+}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Noto Serif JP',serif;background:var(--cream);color:var(--ink);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.85rem 1.3rem;display:flex;align-items:center;justify-content:space-between;background:rgba(253,251,247,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.logo{font-family:'Cormorant Garamond',serif;font-size:.98rem;font-weight:600;letter-spacing:.12em;color:var(--ink);}
+.logo span{color:var(--gold);}
+.nav-btn{background:var(--gold);color:#fff;border:none;padding:.52rem 1.05rem;font-family:'Noto Serif JP',serif;font-size:.72rem;letter-spacing:.07em;cursor:pointer;border-radius:2px;text-decoration:none;display:inline-block;transition:background .3s;}
+.nav-btn:hover{background:var(--gold-deep);}
+#hero{min-height:100svh;padding-top:58px;background:linear-gradient(148deg,#FFFFFF 0%,#FBF6EC 45%,#F5EDD8 100%);position:relative;overflow:hidden;display:flex;flex-direction:column;}
+.hero-word{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Cormorant Garamond',serif;font-size:clamp(9rem,30vw,24rem);font-weight:300;font-style:italic;color:rgba(197,165,90,.05);white-space:nowrap;pointer-events:none;user-select:none;}
+.hero-body{padding:2.2rem 1.4rem 0;text-align:center;position:relative;z-index:2;}
+.hero-ey{font-family:'Cormorant Garamond',serif;font-size:.73rem;letter-spacing:.42em;color:var(--gold);text-transform:uppercase;margin-bottom:1rem;animation:fu .7s ease both;}
+.hero-h1{font-family:'Zen Old Mincho',serif;font-size:clamp(1.52rem,5.6vw,2.9rem);font-weight:700;line-height:1.65;color:var(--ink);margin-bottom:1.1rem;animation:fu .7s .12s ease both;}
+.hero-h1 .g{color:var(--gold);}
+.hero-sub{font-size:.84rem;line-height:2;color:var(--ink-soft);max-width:440px;margin:0 auto 1.4rem;animation:fu .7s .22s ease both;}
+.badges{display:flex;flex-wrap:wrap;gap:.45rem;justify-content:center;margin-bottom:1.9rem;animation:fu .7s .32s ease both;}
+.badge{background:rgba(197,165,90,.1);color:var(--gold-deep);font-family:'Cormorant Garamond',serif;font-size:.7rem;letter-spacing:.05em;padding:.38rem .9rem;border-radius:2px;border:1px solid rgba(197,165,90,.28);}
+.hero-pw{position:relative;max-width:365px;margin:0 auto;animation:fu .7s .44s ease both;}
+.hero-frame{position:absolute;top:-9px;left:-9px;right:9px;bottom:9px;border:1px solid rgba(197,165,90,.3);border-radius:4px;pointer-events:none;}
+.hero-img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top center;border-radius:4px 4px 0 0;display:block;background:linear-gradient(135deg,#F5EDD8,#E8D8B8);}
+.scroll-hint{text-align:center;padding:1.3rem 0 2.3rem;position:relative;z-index:2;animation:fu .7s .56s ease both;}
+.scroll-hint span{display:block;font-family:'Cormorant Garamond',serif;font-size:.67rem;letter-spacing:.35em;color:var(--gold);text-transform:uppercase;margin-bottom:.38rem;opacity:.7;}
+.arr{opacity:.4;animation:bnc 2s infinite;}
+@keyframes bnc{0%,100%{transform:translateY(0);}50%{transform:translateY(6px);}}
+.sec{padding:4.8rem 1.4rem;}
+.si{max-width:700px;margin:0 auto;}
+.sl{font-family:'Cormorant Garamond',serif;font-size:.73rem;letter-spacing:.36em;color:var(--gold);text-transform:uppercase;display:block;margin-bottom:.65rem;}
+.st{font-family:'Zen Old Mincho',serif;font-size:clamp(1.45rem,4.6vw,2.15rem);font-weight:700;line-height:1.55;color:var(--ink);margin-bottom:1.3rem;}
+.st em{font-style:normal;color:var(--gold);}
+.gsep{display:flex;align-items:center;gap:.7rem;margin:1.2rem 0;}
+.gsep::before,.gsep::after{content:'';flex:1;height:1px;background:var(--border);}
+.gsep span{font-family:'Cormorant Garamond',serif;font-size:.63rem;color:var(--gold);letter-spacing:.28em;white-space:nowrap;}
+.sb{background:rgba(255,255,255,.8);border:1px solid var(--border);border-radius:12px 12px 12px 0;padding:1.1rem 1.3rem;font-size:.83rem;line-height:2;color:var(--ink-soft);position:relative;margin-top:1.4rem;backdrop-filter:blur(8px);}
+.sb::before{content:'"';font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--gold);opacity:.28;position:absolute;top:-.45rem;left:.65rem;line-height:1;}
+.sbl{display:flex;align-items:center;gap:.55rem;margin-top:.7rem;}
+.sav{width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid var(--gold-light);flex-shrink:0;background:linear-gradient(135deg,#EEE8DA,#D8CAAC);}
+.sn{font-family:'Cormorant Garamond',serif;font-size:.78rem;color:var(--gold-deep);letter-spacing:.04em;}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+.rv.vis{opacity:1;transform:none;}
+.d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}
+@keyframes fu{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+.gold-top{position:relative;}
+.gold-top::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+#prof{background:var(--white);padding:4.8rem 1.4rem;}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:1.8rem;}
+.pimg{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top center;border-radius:3px;display:block;background:linear-gradient(135deg,#F5EDD8,#E8D8B8);}
+.pt h3{font-family:'Zen Old Mincho',serif;font-size:1.05rem;margin-bottom:.75rem;}
+.pt p{font-size:.83rem;line-height:2.05;color:var(--ink-soft);margin-bottom:.75rem;}
+#ortho{background:var(--cream2);}
+.pgrd{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:6px;overflow:hidden;box-shadow:0 2px 20px rgba(197,165,90,.06);}
+.pc{background:var(--white);padding:1.5rem;}
+.pch{background:linear-gradient(135deg,#F9F3E4 0%,#F2E8CC 100%);border-top:2px solid var(--gold);}
+.pch .pn{color:var(--gold-deep);}.pch .pd{color:var(--ink-soft);}.pch .pf{color:var(--gold-deep);}
+.pn{font-family:'Zen Old Mincho',serif;font-size:.98rem;font-weight:700;color:var(--ink);margin-bottom:.44rem;}
+.ptag{display:inline-block;background:var(--gold);color:#fff;font-size:.61rem;letter-spacing:.05em;padding:.17rem .5rem;border-radius:2px;margin-left:.38rem;vertical-align:middle;font-family:'Cormorant Garamond',serif;}
+.pd{font-size:.8rem;line-height:1.87;color:var(--ink-soft);}
+.pf{font-size:.75rem;color:var(--gold-deep);margin-top:.64rem;}
+.pf::before{content:'✦ ';font-size:.52rem;}
+#aes{background:var(--white);position:relative;overflow:hidden;}
+#aes::after{content:'AESTHETIC';position:absolute;bottom:-2rem;right:-1rem;font-family:'Cormorant Garamond',serif;font-size:5.5rem;font-weight:300;color:rgba(197,165,90,.04);pointer-events:none;letter-spacing:-.04em;white-space:nowrap;}
+.ab{border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:2rem;box-shadow:0 2px 20px rgba(197,165,90,.06);}
+.ah{background:linear-gradient(135deg,rgba(197,165,90,.13) 0%,rgba(197,165,90,.06) 100%);border-bottom:1px solid var(--border);padding:1rem 1.3rem;}
+.aen{font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;font-style:italic;color:var(--gold-deep);}
+.ajp{font-size:.68rem;color:var(--ink-mute);letter-spacing:.09em;}
+.abody{padding:1.4rem;background:var(--white);}
+.abody p{font-size:.81rem;line-height:2.05;color:var(--ink-soft);margin-bottom:.8rem;}
+.case-hero{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;}
+.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:4px;}
+.case-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;}
+.case-label{font-family:'Cormorant Garamond',serif;font-size:.67rem;letter-spacing:.12em;color:var(--ink-mute);text-align:center;padding:.3rem 0 .7rem;}
+.fl{list-style:none;margin-top:.75rem;display:flex;flex-direction:column;gap:.42rem;}
+.fl li{font-size:.79rem;color:var(--ink-soft);padding-left:1rem;position:relative;}
+.fl li::before{content:'✦';color:var(--gold);font-size:.5rem;position:absolute;left:0;top:.28rem;}
+.aes-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:.7rem 0;}
+.aes-tag{font-size:.68rem;background:rgba(197,165,90,.1);color:var(--gold-deep);border:1px solid rgba(197,165,90,.25);border-radius:2px;padding:.2rem .55rem;font-family:'Cormorant Garamond',serif;}
+.guar-row{display:flex;gap:.7rem;margin-top:.9rem;}
+.guar{flex:1;background:var(--cream2);border:1px solid var(--border);border-radius:4px;padding:.8rem .7rem;text-align:center;}
+.gnum{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--gold);font-style:italic;line-height:1;}
+.glbl{font-size:.65rem;color:var(--ink-mute);margin-top:.2rem;letter-spacing:.05em;}
+.aes-tbl{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.76rem;}
+.aes-tbl th{background:rgba(197,165,90,.12);color:var(--gold-deep);font-weight:600;padding:.6rem .7rem;text-align:left;border-bottom:1px solid var(--border);font-family:'Cormorant Garamond',serif;}
+.aes-tbl td{padding:.55rem .7rem;border-bottom:1px solid var(--border2);color:var(--ink-soft);vertical-align:top;line-height:1.65;}
+.aes-tbl tr:last-child td{border-bottom:none;}
+.aes-tbl .ci{color:var(--ink-mute);font-size:.72rem;width:28%;}
+#imp{background:linear-gradient(148deg,#FFFDF9 0%,#FBF5E6 50%,#F5EDD5 100%);padding:4.8rem 1.4rem;position:relative;overflow:hidden;}
+#imp::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+#imp .si{position:relative;}#imp .sl{color:var(--gold);}#imp .st{color:var(--ink);}
+.iprow{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin:1.4rem 0;}
+.ipimg{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top center;border-radius:6px;border:1px solid var(--border);display:block;background:linear-gradient(135deg,#F5EDD8,#E8D8B8);}
+.ipc{border:1px solid var(--gold-light);border-radius:6px;padding:2rem 1.3rem;text-align:center;margin:1.6rem 0;background:rgba(255,255,255,.72);backdrop-filter:blur(10px);}
+.ipl{font-family:'Cormorant Garamond',serif;font-size:.72rem;letter-spacing:.38em;color:var(--gold-deep);text-transform:uppercase;display:block;margin-bottom:1rem;}
+.price-wrap{display:flex;align-items:flex-end;justify-content:center;gap:.15em;line-height:1;margin-bottom:.7rem;}
+.price-num{font-family:'Playfair Display',serif;font-size:clamp(4rem,16vw,7rem);font-weight:400;font-style:italic;color:var(--gold);line-height:.9;}
+.price-unit{font-family:'Noto Serif JP',serif;font-size:1.1rem;font-weight:300;color:var(--gold-deep);padding-bottom:.4rem;}
+.ipnote{font-size:.7rem;color:var(--ink-mute);}
+.il{list-style:none;display:flex;flex-direction:column;gap:.65rem;margin-top:1.1rem;}
+.il li{display:flex;align-items:flex-start;gap:.65rem;font-size:.81rem;color:var(--ink-soft);line-height:1.78;}
+.il li::before{content:'✦';color:var(--gold);flex-shrink:0;margin-top:.3rem;font-size:.52rem;}
+#wh{background:var(--cream2);}
+.wcs{display:grid;grid-template-columns:1fr;gap:.9rem;margin-top:1.7rem;}
+.wc{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:1.3rem;display:flex;gap:.9rem;align-items:flex-start;}
+.wi{font-size:1.65rem;flex-shrink:0;}
+.wc h4{font-family:'Zen Old Mincho',serif;font-size:.95rem;margin-bottom:.42rem;}
+.wc p{font-size:.79rem;line-height:1.92;color:var(--ink-soft);}
+#cl{background:var(--white);}
+.reg{margin-bottom:2.2rem;}
+.rt{font-family:'Cormorant Garamond',serif;font-size:.73rem;letter-spacing:.33em;color:var(--gold);text-transform:uppercase;border-bottom:1px solid var(--border);padding-bottom:.5rem;margin-bottom:1rem;}
+.cll{list-style:none;}
+.ci2{padding:.75rem .5rem;border-bottom:1px solid var(--border2);display:flex;flex-direction:column;gap:.22rem;}
+.cn{font-size:.85rem;color:var(--ink);font-weight:500;display:flex;align-items:center;gap:.55rem;}
+.cn::before{content:'◈';color:var(--gold);font-size:.56rem;flex-shrink:0;}
+.ca{font-size:.73rem;color:var(--ink-mute);padding-left:1.1rem;}
+.ca::before{content:'🚉 ';font-size:.68rem;}
+.rcimg{width:100%;max-width:320px;border-radius:6px;display:block;margin:0 auto 1.6rem;aspect-ratio:3/4;object-fit:cover;background:linear-gradient(135deg,#F5EDD8,#E8D8B8);}
+#cta{background:linear-gradient(148deg,#F9F2E0 0%,#EFE3C2 50%,#E8D9AE 100%);padding:5.5rem 1.4rem;position:relative;overflow:hidden;}
+#cta::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.ctai{position:relative;max-width:760px;margin:0 auto;}
+.cta-layout{display:flex;flex-direction:column;align-items:center;gap:2rem;}
+.cta-pw{position:relative;width:100%;max-width:340px;flex-shrink:0;}
+.cta-frame{position:absolute;top:-8px;left:-8px;right:8px;bottom:8px;border:1px solid rgba(197,165,90,.35);border-radius:8px;pointer-events:none;}
+.cta-img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top center;border-radius:8px;display:block;box-shadow:0 8px 40px rgba(197,165,90,.2);background:linear-gradient(135deg,#F5EDD8,#E8D8B8);}
+.cta-txt{text-align:center;}
+#cta h2{font-family:'Zen Old Mincho',serif;font-size:clamp(1.38rem,5vw,2.3rem);color:var(--ink);line-height:1.65;margin-bottom:.85rem;}
+#cta p{font-size:.82rem;color:var(--ink-soft);margin-bottom:2rem;line-height:2;}
+.bg{display:block;max-width:310px;margin:0 auto .75rem;background:var(--gold);color:#fff;text-decoration:none;padding:1.15rem;font-family:'Noto Serif JP',serif;font-size:.85rem;letter-spacing:.1em;border-radius:2px;transition:all .3s;box-shadow:0 4px 20px rgba(197,165,90,.35);}
+.bg:hover{background:var(--gold-deep);}
+.bo{display:block;max-width:310px;margin:0 auto 1.8rem;background:rgba(255,255,255,.7);color:var(--gold-deep);text-decoration:none;padding:1rem;font-family:'Noto Serif JP',serif;font-size:.81rem;letter-spacing:.1em;border-radius:2px;border:1px solid var(--gold-light);transition:all .3s;}
+.bo:hover{background:var(--white);}
+@media(min-width:680px){
+  .cta-layout{flex-direction:row;align-items:flex-start;gap:3rem;}
+  .cta-pw{max-width:280px;}
+  .cta-txt{text-align:left;flex:1;}
+  .bg,.bo{margin-left:0;margin-right:auto;}
+}
+footer{background:var(--cream2);padding:1.8rem 1.4rem;text-align:center;border-top:1px solid var(--border);}
+.fl2{font-family:'Cormorant Garamond',serif;font-size:.97rem;color:var(--gold-deep);letter-spacing:.15em;display:block;margin-bottom:.65rem;}
+footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-mute);letter-spacing:.08em;}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">清翔会 <span>Dental</span></div>
+  <a href="https://reserve.shareconnect.co.jp/?r=tb4d11&treatment_ids=1766627271947%2C1767579807369%2C1766627284554%2C1766641212044%2C1766627335021" target="_blank" class="nav-btn">無料相談を予約する</a>
+</nav>
+<section id="hero">
+  <div class="hero-word">Smile</div>
+  <div class="hero-body">
+    <p class="hero-ey">Seishokai Dental Group</p>
+    <h1 class="hero-h1">一生モノの笑顔を、<br>あなたと一緒に。<br><span class="g">清翔会</span>の審美歯科。</h1>
+    <p class="hero-sub">看板歯科衛生士「らんちゃん」が、<br>矯正・審美・インプラントのすべてをご案内します。</p>
+    <div class="badges">
+      <span class="badge">Black Film 次世代ベニア</span>
+      <span class="badge">インプラント 17万円〜</span>
+      <span class="badge">寿谷法 期間短縮矯正</span>
+    </div>
+    <div class="hero-pw">
+      <div class="hero-frame"></div>
+      <img src="https://seishokai.github.io/shift/lp-images/ran-hero.jpg" alt="らんちゃん" class="hero-img">
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <svg class="arr" width="16" height="22" viewBox="0 0 16 22" fill="none">
+        <path d="M8 2v18M3 15l5 5 5-5" stroke="#C5A55A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+<section id="prof" class="gold-top">
+  <div class="si">
+    <div class="rv"><span class="sl">Profile</span><h2 class="st">らんちゃんって、<em>誰？</em></h2></div>
+    <div class="gsep rv d1"><span>◈</span></div>
+    <div class="pgrid rv d2">
+      <img src="https://seishokai.github.io/shift/lp-images/ran-smile.jpg" alt="らんちゃん 笑顔" class="pimg">
+      <img src="https://seishokai.github.io/shift/lp-images/ran-uniform.jpg" alt="らんちゃん 白衣" class="pimg">
+    </div>
+    <div class="pt rv d2">
+      <h3>医療法人清翔会 看板歯科衛生士</h3>
+      <p>歯科衛生士として日々患者様と向き合う中で、「歯の悩みを気軽に相談できる場所があればいいのに」という想いから、清翔会の魅力を発信しています。</p>
+      <p>矯正・審美・インプラントすべての治療に精通しており、あなたに合ったプランを一緒に考えるパートナーでありたいと思っています。</p>
+      <div class="sb">歯並びや歯の色って、コンプレックスになりがちですよね。でも、ちゃんと相談できる場所さえ見つかれば、意外と早く解決できることが多いんです。まずは気軽に話しかけてください♪
+        <div class="sbl"><div class="sav"></div><span class="sn">らんちゃん — Dental Hygienist</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="ortho" class="sec gold-top">
+  <div class="si">
+    <div class="rv"><span class="sl">Orthodontics</span><h2 class="st">選べる<em>4つの矯正</em>プラン</h2></div>
+    <div class="gsep rv d1"><span>◈</span></div>
+    <div class="pgrd rv d2">
+      <div class="pc"><div class="pn">🦷 表側矯正</div><p class="pd">スタンダードで確実な矯正方法。ブラケットを歯の表面に装着するオーソドックスな手法で、あらゆる症例に対応できます。</p><p class="pf">費用を抑えながら確実に歯並びを改善</p></div>
+      <div class="pc"><div class="pn">🌙 裏側矯正（リンガル）</div><p class="pd">歯の裏側にブラケットをつけるため、周囲に気づかれることなく矯正治療が可能。接客業や人前に出るお仕事の方に特に人気です。</p><p class="pf">見た目を気にせず矯正したい方に</p></div>
+      <div class="pc"><div class="pn">💎 マウスピース矯正</div><p class="pd">透明なマウスピースを使用した取り外し可能な矯正。食事や歯磨きも普段通りにでき、ライフスタイルへの負担が少ない選択肢です。</p><p class="pf">ライフスタイルに合わせて選べる</p></div>
+      <div class="pc pch"><div class="pn">⚡ 寿谷法コルチコトミー矯正 <span class="ptag">独自強み</span></div><p class="pd">骨に微小な切れ目を入れることで歯の移動を促進。通常の矯正より大幅に期間を短縮できる、清翔会の誇る独自技術です。</p><p class="pf">最短期間で理想の歯並びへ</p></div>
+    </div>
+    <div class="sb rv d3">矯正って「時間がかかるから…」とためらう方が多いんですが、寿谷法を使うと期間を大幅に短縮できるんです！忙しい方でもあきらめないでほしいな、と思っています。
+      <div class="sbl"><div class="sav"></div><span class="sn">らんちゃんの矯正アドバイス</span></div>
+    </div>
+  </div>
+</section>
+<section id="aes" class="sec gold-top">
+  <div class="si">
+    <div class="rv"><span class="sl">Aesthetic Dentistry</span><h2 class="st">歯を<em>削らず</em>、美しく。</h2></div>
+    <div class="gsep rv d1"><span>◈</span></div>
+    <div class="ab rv d2">
+      <div class="ah"><div class="aen">Black Film</div><div class="ajp">ブラックフィルム — 韓国発・セラミックベニア</div></div>
+      <img src="https://seishokai.github.io/shift/30.jpg" alt="BF Before/After" class="case-hero">
+      <div class="case-grid">
+        <img src="https://seishokai.github.io/shift/20.jpg" alt="すき歯症例"><img src="https://seishokai.github.io/shift/40.jpg" alt="韓国アイドル風">
+        <img src="https://seishokai.github.io/shift/60.jpg" alt="美しい歯"><img src="https://seishokai.github.io/shift/90.jpg" alt="Before/After">
+      </div>
+      <p class="case-label">症例写真 ／ Before・After実例</p>
+      <div class="abody">
+        <p>歯科技工士による完全手作業で製作された<strong>0.1mmの超薄型セラミックベニア</strong>。韓国で2016年から80,000件以上の臨床実績。スマイルデザイン（顔分析）により理想の笑顔を設計します。</p>
+        <div class="aes-tags"><span class="aes-tag">歯を削らない</span><span class="aes-tag">最薄0.1mm</span><span class="aes-tag">完全手作業</span><span class="aes-tag">韓国80,000件以上</span><span class="aes-tag">保証10年</span></div>
+        <ul class="fl"><li>エナメル質を削ることなく最高峰の仕上がりを実現</li><li>1日かけてドクター・技工士・患者の3者で徹底調整</li><li>ホワイトニングでは落ちない着色・形・歯並びを同時改善</li></ul>
+        <div class="guar-row">
+          <div class="guar"><div class="gnum">10<span style="font-size:.9rem">年</span></div><div class="glbl">保証期間</div></div>
+          <div class="guar"><div class="gnum">0.1<span style="font-size:.9rem">mm</span></div><div class="glbl">超薄型設計</div></div>
+          <div class="guar"><div class="gnum">80K+</div><div class="glbl">韓国臨床実績</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="ab rv d2">
+      <div class="ah"><div class="aen">L'ablier</div><div class="ajp">ラブリエ — アジア施術数No.1・ジルコニアベニア</div></div>
+      <img src="https://seishokai.github.io/shift/lovelier_img/slide15_01.jpg" alt="ラブリエ After" class="case-hero">
+      <div class="case-grid">
+        <img src="https://seishokai.github.io/shift/lovelier_img/slide15_00.jpg" alt="Before"><img src="https://seishokai.github.io/shift/lovelier_img/slide17_00.jpg" alt="Case2">
+        <img src="https://seishokai.github.io/shift/lovelier_img/slide18_00.jpg" alt="Case3"><img src="https://seishokai.github.io/shift/lovelier_img/slide03_00.jpg" alt="ベニア">
+      </div>
+      <p class="case-label">症例写真 ／ Before・After実例</p>
+      <div class="abody">
+        <p>人工ダイヤモンド（ジルコニア）を使用した<strong>最薄0.04mm・高強度</strong>のベニア。最新3D技術で製作し、アジア施術数No.1の実績を誇ります。</p>
+        <div class="aes-tags"><span class="aes-tag">最薄0.04mm</span><span class="aes-tag">ジルコニア</span><span class="aes-tag">3Dプリンタ製作</span><span class="aes-tag">アジア施術数No.1</span><span class="aes-tag">劣化しない白さ</span></div>
+        <ul class="fl"><li>歯を削らないので無痛・歯へのダメージなし</li><li>劣化しない白さと理想の歯の形を長期維持</li><li>オーダーメイドの色調・形態設計</li></ul>
+        <div class="guar-row">
+          <div class="guar"><div class="gnum">3<span style="font-size:.9rem">年</span></div><div class="glbl">標準保証</div></div>
+          <div class="guar"><div class="gnum">0.04<span style="font-size:.75rem">mm</span></div><div class="glbl">世界最薄水準</div></div>
+          <div class="guar"><div class="gnum">Asia<span style="font-size:.65rem"> No.1</span></div><div class="glbl">施術実績</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="rv d2" style="overflow-x:auto;">
+      <table class="aes-tbl">
+        <thead><tr><th class="ci">項目</th><th>La Briller ラブリエ</th><th>Blackfilm ブラックフィルム</th></tr></thead>
+        <tbody>
+          <tr><td class="ci">素材</td><td>ジルコニア（人工ダイヤモンド）</td><td>セラミック</td></tr>
+          <tr><td class="ci">薄さ</td><td>最薄 <strong>0.04mm</strong></td><td>0.1mm</td></tr>
+          <tr><td class="ci">製作</td><td>最新3Dプリンタ</td><td>歯科技工士・完全手作業</td></tr>
+          <tr><td class="ci">保証</td><td>3年（10年オプション）</td><td>10年（破損・脱離・変色）</td></tr>
+          <tr><td class="ci">実績</td><td>アジア施術数No.1</td><td>韓国80,000件以上</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sb rv d3">「歯を削るのが怖い」という声をよく聞きます。Black FilmもラブリエもNO-PREP（歯を削らない）が基本。今の歯を守りながら理想の笑顔が手に入ります♡
+      <div class="sbl"><div class="sav"></div><span class="sn">らんちゃんの審美アドバイス</span></div>
+    </div>
+  </div>
+</section>
+<section id="imp" class="sec">
+  <div class="si">
+    <div class="rv"><span class="sl">Implant</span><h2 class="st">清翔会<em>あんしん</em>インプラント</h2></div>
+    <div class="iprow rv d1">
+      <img src="https://seishokai.github.io/shift/lp-images/ran-smile-pro.jpg" alt="らんちゃん" class="ipimg">
+      <img src="https://seishokai.github.io/shift/lp-images/ran-toothbrush.jpg" alt="らんちゃん" class="ipimg">
+    </div>
+    <div class="ipc rv d2">
+      <span class="ipl">Special Price</span>
+      <div class="price-wrap"><span class="price-num">17</span><span class="price-unit">万円〜</span></div>
+      <p class="ipnote">※税込・条件あり。詳細はカウンセリングにてご確認ください。</p>
+    </div>
+    <ul class="il rv d2">
+      <li>大手医療法人ならではの安心感と充実した保証体制</li>
+      <li>全国11医院で統一された高水準の治療プロトコル</li>
+      <li>経験豊富な専門医による精密な診断・施術</li>
+      <li>術後のメンテナンスも清翔会スタッフが徹底サポート</li>
+      <li>分割払い・デンタルローン対応（要審査）</li>
+    </ul>
+    <div class="sb rv d3">インプラントは「高い」「怖い」というイメージが強いですよね。でも清翔会なら大手法人の安心感と驚くほどリーズナブルな価格を両立できています。まずは相談だけでも！
+      <div class="sbl"><div class="sav"></div><span class="sn">らんちゃんのインプラントアドバイス</span></div>
+    </div>
+  </div>
+</section>
+<section id="wh" class="sec gold-top">
+  <div class="si">
+    <div class="rv"><span class="sl">Whitening &amp; Maintenance</span><h2 class="st"><em>ホワイトニング</em>と定期メンテ</h2></div>
+    <div class="gsep rv d1"><span>◈</span></div>
+    <div class="wcs rv d2">
+      <div class="wc"><div class="wi">✨</div><div><h4>らんちゃん厳選ホワイトニング</h4><p>オフィス・ホーム・コンビネーションなど、ライフスタイルに合わせてプランをご提案。コーヒーや紅茶の着色も驚くほど白く。</p></div></div>
+      <div class="wc"><div class="wi">🦷</div><div><h4>定期検診で美しさをキープ</h4><p>クリーニング・歯石除去・フッ素塗布など、らんちゃんが責任を持って担当します。</p></div></div>
+      <div class="wc"><div class="wi">💬</div><div><h4>オーラルケアカウンセリング</h4><p>ブラッシング指導から食生活アドバイスまで。口腔内全体の健康を長期的にサポートします。</p></div></div>
+    </div>
+    <div class="sb rv d3">「ホワイトニング、どれにしたらいいかわからない」という方が多いです。一緒に理想の白さを見つけましょう！
+      <div class="sbl"><div class="sav"></div><span class="sn">らんちゃんのホワイトニングアドバイス</span></div>
+    </div>
+  </div>
+</section>
+<section id="cl" class="sec gold-top">
+  <div class="si">
+    <div class="rv"><span class="sl">Clinics</span><h2 class="st">全国<em>11医院</em>展開中</h2></div>
+    <div class="gsep rv d1"><span>◈</span></div>
+    <img src="https://seishokai.github.io/shift/lp-images/ran-pro.jpg" alt="らんちゃん" class="rcimg rv d2">
+    <div class="reg rv d2">
+      <p class="rt">Tokyo — 東京</p>
+      <ul class="cll">
+        <li class="ci2"><span class="cn">BF銀座歯科・矯正歯科</span><span class="ca">東京メトロ銀座駅 徒歩3分</span></li>
+        <li class="ci2"><span class="cn">大森駅ファミリー歯科・矯正歯科</span><span class="ca">JR大森駅 徒歩1分</span></li>
+      </ul>
+    </div>
+    <div class="reg rv d2">
+      <p class="rt">Nagoya / Aichi — 名古屋・愛知</p>
+      <ul class="cll">
+        <li class="ci2"><span class="cn">エスカ歯科・矯正歯科</span><span class="ca">JR名古屋駅 新幹線口 徒歩1分 ／ エスカ地下街内</span></li>
+        <li class="ci2"><span class="cn">名駅アール歯科・矯正歯科</span><span class="ca">JR名古屋駅 徒歩1分 ／ 名駅IMAIビル11F</span></li>
+        <li class="ci2"><span class="cn">名古屋ウィズ歯科・矯正歯科</span><span class="ca">JR名古屋駅 徒歩1分</span></li>
+        <li class="ci2"><span class="cn">名古屋ルミナス歯科・矯正歯科</span><span class="ca">地下鉄鶴舞線 黄金駅 徒歩すぐ</span></li>
+        <li class="ci2"><span class="cn">名古屋茶屋歯科・矯正歯科</span><span class="ca">地下鉄名港線 東海通駅 ／ イオンモール名古屋茶屋1F</span></li>
+        <li class="ci2"><span class="cn">名古屋やごと歯科・矯正歯科</span><span class="ca">地下鉄鶴舞線 八事駅 ／ イオン八事店内</span></li>
+        <li class="ci2"><span class="cn">アピタ知立ファミリー歯科・矯正歯科</span><span class="ca">名鉄三河線 知立駅 徒歩5分 ／ ギャラリエアピタ知立店2F</span></li>
+        <li class="ci2"><span class="cn">ワイズ歯科矯正歯科＋KIDS</span><span class="ca">名鉄小牧線 小牧駅 ／ イオンモール小牧店内</span></li>
+      </ul>
+    </div>
+    <div class="reg rv d3">
+      <p class="rt">Kyoto — 京都</p>
+      <ul class="cll">
+        <li class="ci2"><span class="cn">京都河原町スマイルデザイン歯科・矯正歯科</span><span class="ca">阪急京都線 京都河原町駅 徒歩2分 ／ AD-G四条河原町6F</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section id="cta">
+  <div class="ctai">
+    <div class="cta-layout">
+      <div class="cta-pw rv">
+        <div class="cta-frame"></div>
+        <img src="https://seishokai.github.io/shift/lp-images/ran-smile-pro.jpg" alt="らんちゃん" class="cta-img">
+      </div>
+      <div class="cta-txt rv d1">
+        <h2>まずは無料カウンセリングから<br>はじめてみませんか？</h2>
+        <p>らんちゃんをはじめ、清翔会のスタッフが<br>あなたの笑顔のお悩みに寄り添います。<br>相談だけでも、お気軽にどうぞ。</p>
+        <a href="https://reserve.shareconnect.co.jp/?r=tb4d11&treatment_ids=1766627271947%2C1767579807369%2C1766627284554%2C1766641212044%2C1766627335021" target="_blank" class="bg">無料カウンセリングを予約する</a>
+        <a href="https://reserve.shareconnect.co.jp/?r=tb4d11&treatment_ids=1766627271947%2C1767579807369%2C1766627284554%2C1766641212044%2C1766627335021" target="_blank" class="bo">LINEで気軽に相談する</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <span class="fl2">医療法人清翔会 Seishokai Dental Group</span>
+  <p>© 2024 Seishokai Dental Group. All rights reserved.</p>
+</footer>
+<script>
+const obs=new IntersectionObserver(e=>e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')}),{threshold:0.1});
+document.querySelectorAll('.rv').forEach(e=>obs.observe(e));
+</script>
+</body>
+</html>
