@@ -144,6 +144,8 @@ nav{position:fixed;top:34px;left:0;right:0;z-index:100;padding:.85rem 1.3rem;dis
 .cta-txt{text-align:center;}
 #cta h2{font-family:'Zen Old Mincho',serif;font-size:clamp(1.38rem,5vw,2.3rem);color:var(--ink);line-height:1.65;margin-bottom:.85rem;}
 #cta p{font-size:.82rem;color:var(--ink-soft);margin-bottom:2rem;line-height:2;}
+.cta-badge{display:inline-block;font-family:'Cormorant Garamond',serif;font-size:.68rem;letter-spacing:.18em;color:var(--gold-deep);background:rgba(255,255,255,.55);padding:.28rem .7rem;border:1px solid var(--gold-light);border-radius:2px;margin-bottom:.95rem;}
+.cta-subnote{font-size:.72rem;color:var(--ink-soft);margin:1.3rem 0 .5rem;letter-spacing:.05em;}
 .bg{display:block;max-width:310px;margin:0 auto .75rem;background:var(--gold);color:#fff;text-decoration:none;padding:1.15rem;font-family:'Noto Serif JP',serif;font-size:.85rem;letter-spacing:.1em;border-radius:2px;transition:all .3s;box-shadow:0 4px 20px rgba(197,165,90,.35);}
 .bg:hover{background:var(--gold-deep);}
 .bo{display:block;max-width:310px;margin:0 auto 1.8rem;background:rgba(255,255,255,.7);color:var(--gold-deep);text-decoration:none;padding:1rem;font-family:'Noto Serif JP',serif;font-size:.81rem;letter-spacing:.1em;border-radius:2px;border:1px solid var(--gold-light);transition:all .3s;}
@@ -187,9 +189,12 @@ nav{position:fixed;top:34px;left:0;right:0;z-index:100;padding:.85rem 1.3rem;dis
 #event .time-day:last-of-type{margin-bottom:0;padding-bottom:0;border-bottom:none;}
 #event .td-date{font-family:'Playfair Display',serif;font-size:2rem;font-style:italic;font-weight:700;color:var(--gold);line-height:1;}
 #event .td-wd{font-size:.72rem;color:var(--ink-mute);letter-spacing:.15em;}
-#event .td-slots{display:flex;flex-direction:column;gap:.3rem;flex:1;}
-#event .td-slot{font-family:'Cormorant Garamond',serif;font-size:.88rem;color:var(--ink);letter-spacing:.05em;background:var(--cream2);padding:.38rem .75rem;border-radius:2px;text-align:center;border:1px solid var(--border2);}
-#event .slots-note{text-align:center;font-size:.74rem;color:#B8432E;margin-top:1.4rem;letter-spacing:.05em;font-weight:500;}
+#event .td-slots{display:flex;flex-direction:column;gap:.4rem;flex:1;}
+#event .td-slot{display:flex;align-items:center;gap:.65rem;background:var(--cream2);padding:.45rem .85rem;border-radius:2px;border:1px solid var(--border2);}
+#event .td-label{font-family:'Cormorant Garamond',serif;font-size:.66rem;color:var(--gold-deep);letter-spacing:.2em;min-width:34px;text-transform:uppercase;font-weight:600;}
+#event .td-time{font-family:'Cormorant Garamond',serif;font-size:.92rem;color:var(--ink);letter-spacing:.06em;flex:1;text-align:center;}
+#event .slots-note{text-align:center;font-size:.76rem;color:var(--ink-soft);margin-top:1.5rem;letter-spacing:.04em;line-height:1.8;}
+#event .slots-note strong{color:#B8432E;font-weight:700;}
 #event .e-venue-sec{background:var(--white);}
 #event .vcard{border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:0 2px 20px rgba(197,165,90,.06);max-width:560px;margin:0 auto;}
 #event .vcard .vh{background:linear-gradient(135deg,rgba(197,165,90,.13) 0%,rgba(197,165,90,.06) 100%);padding:1.2rem 1.4rem;border-bottom:1px solid var(--border);}
@@ -252,7 +257,7 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
     <p class="e-venue">at <strong>BF銀座歯科・矯正歯科</strong></p>
     <p class="e-acc">東京メトロ 銀座駅 徒歩3分</p>
     <span class="e-limit">◆ 各時間帯 1枠限定 ◆</span>
-    <a href="#event-cta" class="e-cta-btn">予約フォームへ</a>
+    <a href="https://reserve.shareconnect.co.jp/?r=i3rlgb&treatment_ids=1776529038261%2C1776529022259" target="_blank" rel="noopener" class="e-cta-btn">5/21・22 限定イベントを予約する</a>
   </div>
 
   <div class="sec e-menu">
@@ -302,8 +307,8 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
             <div class="td-wd">WED</div>
           </div>
           <div class="td-slots">
-            <div class="td-slot">9:30 — 13:30</div>
-            <div class="td-slot">14:30 — 18:00</div>
+            <div class="td-slot"><span class="td-label">AM</span><span class="td-time">9:30 〜 13:30</span></div>
+            <div class="td-slot"><span class="td-label">PM</span><span class="td-time">14:30 〜 18:00</span></div>
           </div>
         </div>
         <div class="time-day">
@@ -312,11 +317,11 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
             <div class="td-wd">THU</div>
           </div>
           <div class="td-slots">
-            <div class="td-slot">9:30 — 13:30</div>
-            <div class="td-slot">14:30 — 18:00</div>
+            <div class="td-slot"><span class="td-label">AM</span><span class="td-time">9:30 〜 13:30</span></div>
+            <div class="td-slot"><span class="td-label">PM</span><span class="td-time">14:30 〜 18:00</span></div>
           </div>
         </div>
-        <p class="slots-note">※ 各時間帯 1時間につき1枠限定 ／ 先着順</p>
+        <p class="slots-note">上記の時間帯のうち、<strong>1時間に1枠のみ</strong> ご予約いただけます<br>※ 先着順・埋まり次第終了</p>
       </div>
     </div>
   </div>
@@ -528,10 +533,12 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
         <img src="https://seishokai.github.io/shift/lp-images/ran-smile-pro.jpg" alt="らんちゃん" class="cta-img">
       </div>
       <div class="cta-txt rv d1">
-        <h2>まずは無料カウンセリングから<br>はじめてみませんか？</h2>
-        <p>らんちゃんをはじめ、清翔会のスタッフが<br>あなたの笑顔のお悩みに寄り添います。<br>相談だけでも、お気軽にどうぞ。</p>
-        <a href="https://reserve.shareconnect.co.jp/?r=tb4d11&treatment_ids=1766627271947%2C1767579807369%2C1766627284554%2C1766641212044%2C1766627335021" target="_blank" class="bg">無料カウンセリングを予約する</a>
-        <a href="https://reserve.shareconnect.co.jp/?r=tb4d11&treatment_ids=1766627271947%2C1767579807369%2C1766627284554%2C1766641212044%2C1766627335021" target="_blank" class="bo">LINEで気軽に相談する</a>
+        <span class="cta-badge">◆ 通常の無料カウンセリング ／ Regular</span>
+        <h2>いつでもご予約OK。<br>まずは気軽にご相談を。</h2>
+        <p>全国11医院で随時受付中。らんちゃんをはじめ、清翔会のスタッフが<br>あなたの笑顔のお悩みに寄り添います。相談だけでも大歓迎です。</p>
+        <a href="https://reserve.shareconnect.co.jp/?r=tb4d11&treatment_ids=1766627271947%2C1767579807369%2C1766627284554%2C1766641212044%2C1766627335021" target="_blank" class="bg">通常の無料カウンセリングを予約する</a>
+        <p class="cta-subnote">▼ 5/21・22 の BF銀座 限定相談会はこちら</p>
+        <a href="#event" class="bo">5/21・22 限定イベントを見る</a>
       </div>
     </div>
   </div>
