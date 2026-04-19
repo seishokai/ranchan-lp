@@ -195,12 +195,13 @@ nav{position:fixed;top:34px;left:0;right:0;z-index:100;padding:.85rem 1.3rem;dis
 #event .event-hero{padding:5rem 1.4rem 4rem;background:radial-gradient(ellipse at top,#FBF5E6 0%,#F5EDD5 40%,#E8D9AE 100%);text-align:center;display:flex;flex-direction:column;align-items:center;border-top:2px solid var(--gold);}
 #event .e-tag{font-family:'Cormorant Garamond',serif;font-size:.76rem;letter-spacing:.4em;color:var(--gold-deep);text-transform:uppercase;margin-bottom:1.1rem;}
 #event .date-block{margin-bottom:1.6rem;}
-#event .date-y{font-family:'Cormorant Garamond',serif;font-size:.88rem;color:var(--gold-deep);letter-spacing:.35em;margin-bottom:.3rem;}
-#event .date-main{font-family:'Playfair Display',serif;font-size:clamp(3.3rem,14vw,6rem);font-style:italic;font-weight:700;line-height:1;color:var(--ink);}
-#event .date-main .sep{color:var(--gold);font-weight:400;margin:0 .1em;}
-#event .date-wd{font-family:'Noto Serif JP',serif;font-size:.78rem;letter-spacing:.25em;color:var(--ink-soft);margin-top:.55rem;}
-#event .date-jp{margin-top:1rem;padding-top:.85rem;border-top:1px solid var(--border2);font-family:'Zen Old Mincho',serif;font-size:1rem;font-weight:700;color:var(--ink);letter-spacing:.04em;}
-#event .date-jp-sub{display:inline-block;margin-left:.4em;font-family:'Noto Serif JP',serif;font-weight:400;font-size:.75rem;color:#B8432E;letter-spacing:.08em;}
+#event .date-y{font-family:'Cormorant Garamond',serif;font-size:.78rem;color:var(--gold-deep);letter-spacing:.35em;margin-bottom:.3rem;font-weight:600;}
+#event .date-main{font-family:'Playfair Display',serif;font-size:clamp(3.3rem,14vw,6rem);font-style:italic;font-weight:700;line-height:1;color:var(--ink);display:flex;align-items:center;justify-content:center;gap:0;}
+#event .date-main .date-mo{color:#B8432E;}
+#event .date-main .date-slash{color:var(--gold);font-weight:400;margin:0 .05em;}
+#event .date-main .sep{color:var(--gold);font-weight:400;margin:0 .08em;}
+#event .date-wd{font-family:'Noto Serif JP',serif;font-size:.78rem;letter-spacing:.22em;color:var(--ink-soft);margin-top:.65rem;}
+#event .date-tag{display:inline-block;margin-top:.95rem;padding:.35rem .9rem;background:var(--ink);color:#fff;font-family:'Zen Old Mincho',serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;border-radius:2px;}
 #event .e-h1{font-family:'Zen Old Mincho',serif;font-size:clamp(1.4rem,5.2vw,2.4rem);font-weight:700;line-height:1.65;color:var(--ink);margin-bottom:1.1rem;}
 #event .e-h1 .g{color:var(--gold);}
 #event .e-venue{font-size:.82rem;color:var(--ink-soft);letter-spacing:.08em;margin-bottom:.35rem;}
@@ -354,10 +355,10 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
   <div class="event-hero">
     <p class="e-tag">Special Event · BF Ginza</p>
     <div class="date-block">
-      <div class="date-y">2025年 5月</div>
-      <div class="date-main">21<span class="sep">·</span>22</div>
-      <div class="date-wd">Wednesday · Thursday</div>
-      <div class="date-jp">5月21日（水）・22日（木）<span class="date-jp-sub">／ 2日間限定</span></div>
+      <div class="date-y">2025</div>
+      <div class="date-main"><span class="date-mo">5</span><span class="date-slash">/</span>21<span class="sep">·</span>22</div>
+      <div class="date-wd">水 · 木　／　Wed · Thu</div>
+      <div class="date-tag">2日間限定イベント</div>
     </div>
     <h2 class="e-h1"><span class="g">無料カウンセリング</span>＆<br>自費クリーニング相談会</h2>
     <p class="e-venue">会場 ／ <strong>BF銀座歯科・矯正歯科</strong></p>
