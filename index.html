@@ -229,16 +229,18 @@ nav{position:fixed;top:34px;left:0;right:0;z-index:100;padding:.85rem 1.3rem;dis
 #event .mcard ul li{font-size:.79rem;color:var(--ink-soft);padding-left:1rem;position:relative;line-height:1.9;}
 #event .mcard ul li::before{content:'✦';color:var(--gold);font-size:.5rem;position:absolute;left:0;top:.42rem;}
 #event .e-sch{background:linear-gradient(148deg,#FBF5E6 0%,#F5EDD5 100%);}
-#event .time-wrap{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.8rem 1.4rem;box-shadow:0 4px 28px rgba(197,165,90,.1);max-width:500px;margin:0 auto;}
-#event .time-day{display:flex;align-items:center;justify-content:center;gap:.8rem;margin-bottom:1.4rem;padding-bottom:1.1rem;border-bottom:1px solid var(--border2);}
-#event .time-day:last-of-type{margin-bottom:0;padding-bottom:0;border-bottom:none;}
-#event .td-date{font-family:'Playfair Display',serif;font-size:2rem;font-style:italic;font-weight:700;color:var(--gold);line-height:1;}
-#event .td-wd{font-size:.72rem;color:var(--ink-mute);letter-spacing:.15em;}
-#event .td-slots{display:flex;flex-direction:column;gap:.4rem;flex:1;}
-#event .td-slot{display:flex;align-items:center;gap:.55rem;background:var(--cream2);padding:.45rem .7rem;border-radius:2px;border:1px solid var(--border2);}
-#event .td-label{font-family:'Cormorant Garamond',serif;font-size:.66rem;color:var(--gold-deep);letter-spacing:.2em;min-width:30px;text-transform:uppercase;font-weight:600;}
-#event .td-time{font-family:'Cormorant Garamond',serif;font-size:.88rem;color:var(--ink);letter-spacing:.06em;flex:1;text-align:center;}
-#event .av-badge{font-size:.68rem;letter-spacing:.06em;padding:.18rem .45rem;border-radius:2px;font-weight:700;min-width:56px;text-align:center;flex-shrink:0;}
+#event .time-wrap{max-width:520px;margin:0 auto;display:flex;flex-direction:column;gap:1rem;}
+#event .time-day{background:var(--white);border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:0 4px 20px rgba(197,165,90,.08);}
+#event .td-head{background:linear-gradient(135deg,var(--ink) 0%,#3d342c 100%);color:#fff;padding:.85rem 1.2rem;display:flex;align-items:baseline;gap:.5rem;}
+#event .td-date{font-family:'Zen Old Mincho',serif;font-size:1.25rem;font-weight:700;letter-spacing:.03em;color:#fff;}
+#event .td-wd{font-family:'Noto Serif JP',serif;font-size:.9rem;color:var(--gold-light);letter-spacing:.08em;font-weight:400;}
+#event .td-en{margin-left:auto;font-family:'Cormorant Garamond',serif;font-size:.72rem;letter-spacing:.22em;color:rgba(232,213,160,.65);text-transform:uppercase;font-style:italic;}
+#event .td-slots{display:flex;flex-direction:column;}
+#event .td-slot{display:flex;align-items:center;gap:.7rem;padding:.95rem 1.2rem;border-bottom:1px solid var(--border2);}
+#event .td-slot:last-child{border-bottom:none;}
+#event .td-label{font-family:'Zen Old Mincho',serif;font-size:.92rem;color:var(--gold-deep);font-weight:700;min-width:40px;flex-shrink:0;}
+#event .td-time{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--ink);letter-spacing:.04em;flex:1;}
+#event .av-badge{font-size:.74rem;letter-spacing:.04em;padding:.3rem .6rem;border-radius:2px;font-weight:700;text-align:center;flex-shrink:0;font-family:'Noto Serif JP',serif;}
 #event .av-ok{background:#E4F0E0;color:#3e7a2d;border:1px solid #bfd9b5;}
 #event .av-few{background:#FCECD5;color:#B06E1E;border:1px solid #f2c98c;}
 #event .av-full{background:#F5DAD6;color:#9C2F25;border:1px solid #e3a6a0;text-decoration:line-through;opacity:.85;}
@@ -355,9 +357,9 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
   <div class="event-hero">
     <p class="e-tag">Special Event · BF Ginza</p>
     <div class="date-block">
-      <div class="date-y">2025</div>
+      <div class="date-y">2026</div>
       <div class="date-main"><span class="date-mo">5</span><span class="date-slash">/</span>21<span class="sep">·</span>22</div>
-      <div class="date-wd">水 · 木　／　Wed · Thu</div>
+      <div class="date-wd">木 · 金　／　Thu · Fri</div>
       <div class="date-tag">2日間限定イベント</div>
     </div>
     <h2 class="e-h1"><span class="g">無料カウンセリング</span>＆<br>自費クリーニング相談会</h2>
@@ -421,23 +423,21 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
       </div>
       <div class="time-wrap rv d1">
         <div class="time-day">
-          <div>
-            <div class="td-date">5/21</div>
-            <div class="td-wd">WED</div>
+          <div class="td-head">
+            <span class="td-date">5月21日</span><span class="td-wd">（木）</span><span class="td-en">Day 1 · Thu</span>
           </div>
           <div class="td-slots">
-            <div class="td-slot"><span class="td-label">AM</span><span class="td-time">9:30 〜 13:30</span><span class="av-badge av-ok">◯ 空きあり</span></div>
-            <div class="td-slot"><span class="td-label">PM</span><span class="td-time">14:30 〜 18:00</span><span class="av-badge av-few">△ 残わずか</span></div>
+            <div class="td-slot"><span class="td-label">午前</span><span class="td-time">9:30 〜 13:30</span><span class="av-badge av-ok">◯ 空きあり</span></div>
+            <div class="td-slot"><span class="td-label">午後</span><span class="td-time">14:30 〜 18:00</span><span class="av-badge av-ok">◯ 空きあり</span></div>
           </div>
         </div>
         <div class="time-day">
-          <div>
-            <div class="td-date">5/22</div>
-            <div class="td-wd">THU</div>
+          <div class="td-head">
+            <span class="td-date">5月22日</span><span class="td-wd">（金）</span><span class="td-en">Day 2 · Fri</span>
           </div>
           <div class="td-slots">
-            <div class="td-slot"><span class="td-label">AM</span><span class="td-time">9:30 〜 13:30</span><span class="av-badge av-few">△ 残わずか</span></div>
-            <div class="td-slot"><span class="td-label">PM</span><span class="td-time">14:30 〜 18:00</span><span class="av-badge av-ok">◯ 空きあり</span></div>
+            <div class="td-slot"><span class="td-label">午前</span><span class="td-time">9:30 〜 13:30</span><span class="av-badge av-ok">◯ 空きあり</span></div>
+            <div class="td-slot"><span class="td-label">午後</span><span class="td-time">14:30 〜 18:00</span><span class="av-badge av-ok">◯ 空きあり</span></div>
           </div>
         </div>
         <div class="av-legend" style="display:flex;justify-content:center;gap:.9rem;margin-top:1.1rem;font-size:.68rem;color:var(--ink-mute);letter-spacing:.05em;flex-wrap:wrap;">
@@ -459,7 +459,7 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
       </div>
       <div class="flow-list rv d1">
         <div class="flow-step has-img">
-          <img src="https://lh3.googleusercontent.com/d/1DCo7IXh6P5E_tzJyKrlMcZJv4wUPK_jD=w400" alt="受付スタッフ" loading="lazy" class="flow-thumb">
+          <img src="https://lh3.googleusercontent.com/d/1DCo7IXh6P5E_tzJyKrlMcZJv4wUPK_jD=w1600" alt="受付スタッフ" loading="lazy" class="flow-thumb">
           <div class="flow-inner">
             <div class="flow-num">01</div>
             <div class="flow-body">
@@ -469,7 +469,7 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
           </div>
         </div>
         <div class="flow-step has-img">
-          <img src="https://lh3.googleusercontent.com/d/18bdwwhokBUTFXx89rbTjmoDBSw6WJX4P=w400" alt="カウンセリング風景" loading="lazy" class="flow-thumb">
+          <img src="https://lh3.googleusercontent.com/d/18bdwwhokBUTFXx89rbTjmoDBSw6WJX4P=w1600" alt="カウンセリング風景" loading="lazy" class="flow-thumb">
           <div class="flow-inner">
             <div class="flow-num">02</div>
             <div class="flow-body">
@@ -479,7 +479,7 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
           </div>
         </div>
         <div class="flow-step has-img">
-          <img src="https://lh3.googleusercontent.com/d/11amH5YTJTYuk8VLiCS17cVzA5TkKuEdL=w400" alt="口腔内チェック" loading="lazy" class="flow-thumb">
+          <img src="https://lh3.googleusercontent.com/d/11amH5YTJTYuk8VLiCS17cVzA5TkKuEdL=w1600" alt="口腔内チェック" loading="lazy" class="flow-thumb">
           <div class="flow-inner">
             <div class="flow-num">03</div>
             <div class="flow-body">
@@ -516,7 +516,7 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
         <div class="vb">
           <div class="vrow"><div class="vk">ACCESS</div><div>東京メトロ 銀座駅 徒歩3分<br>JR 有楽町駅 徒歩5分</div></div>
           <div class="vrow"><div class="vk">HOURS</div><div>9:30 — 13:30 / 14:30 — 18:00</div></div>
-          <div class="vrow"><div class="vk">EVENT</div><div>5/21(水)・22(木) の 2日間限定</div></div>
+          <div class="vrow"><div class="vk">EVENT</div><div>5/21(木)・22(金) の 2日間限定</div></div>
         </div>
       </div>
       <div class="venue-gallery rv d2">
@@ -782,7 +782,7 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
 </section>
 <footer>
   <span class="fl2">医療法人清翔会 Seishokai Dental Group</span>
-  <p>© 2025 Seishokai Dental Group. All rights reserved.</p>
+  <p>© 2026 Seishokai Dental Group. All rights reserved.</p>
 </footer>
 
 <div class="mobile-cta">
