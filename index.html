@@ -226,6 +226,17 @@ nav{position:fixed;top:34px;left:0;right:0;z-index:100;padding:.85rem 1.3rem;dis
 #event .rp-tax{font-family:'Noto Serif JP',serif;font-size:.7rem;color:var(--ink-mute);font-style:normal;font-weight:400;}
 #event .rp-note{font-size:.72rem;color:var(--ink-soft);line-height:1.6;margin:0!important;}
 #event .mcard ul{list-style:none;}
+#event .merit-block{margin-top:1rem;background:var(--cream2);border-radius:4px;padding:.9rem 1rem .95rem;border:1px solid var(--border2);}
+#event .merit-block + .merit-block{margin-top:.7rem;}
+#event .mb-head{display:flex;align-items:center;gap:.55rem;margin-bottom:.6rem;padding-bottom:.55rem;border-bottom:1px solid var(--border2);}
+#event .mb-label{font-family:'Cormorant Garamond',serif;font-size:.64rem;letter-spacing:.22em;padding:.2rem .55rem;border-radius:2px;font-weight:700;text-transform:uppercase;}
+#event .mb-pros{background:#E4F0E0;color:#3e7a2d;border:1px solid #bfd9b5;}
+#event .mb-cons{background:#FBEFE0;color:#8F5523;border:1px solid #e9cfa8;}
+#event .mb-jp{font-family:'Zen Old Mincho',serif;font-size:.92rem;font-weight:700;color:var(--ink);}
+#event .mb-list{list-style:none;display:flex;flex-direction:column;gap:.55rem;}
+#event .mb-list li{font-size:.8rem;line-height:1.85;color:var(--ink-soft);padding-left:1.1rem;position:relative;}
+#event .mb-pros-list li::before{content:'◎';color:#3e7a2d;font-size:.7rem;position:absolute;left:0;top:.15rem;}
+#event .mb-cons-list li::before{content:'!';color:#8F5523;font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:.9rem;position:absolute;left:.3rem;top:0;}
 #event .mcard ul li{font-size:.79rem;color:var(--ink-soft);padding-left:1rem;position:relative;line-height:1.9;}
 #event .mcard ul li::before{content:'✦';color:var(--gold);font-size:.5rem;position:absolute;left:0;top:.42rem;}
 #event .e-sch{background:linear-gradient(148deg,#FBF5E6 0%,#F5EDD5 100%);}
@@ -403,13 +414,21 @@ footer p{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--ink-
           </div>
           <p class="rp-note">クリーニング希望の方は、当日そのまま施術いただけます</p>
         </div>
-        <p>保険診療では落としきれない着色・ステイン・歯石を、自費診療ならではの機材と時間をかけて徹底的にケアします。当日は、実際のメニュー内容・施術時間・費用について詳しくご説明いたします。</p>
-        <ul>
-          <li>エアフロー（ステイン・プラーク除去）</li>
-          <li>PMTC（ツルツルの仕上げ磨き）</li>
-          <li>ホワイトニング前ケアのご相談</li>
-          <li>定期メンテナンスプランのご案内</li>
-        </ul>
+        <p>保険診療では落としきれない着色・ステイン・歯石を、自費診療ならではの機材と時間をかけて徹底的にケア。一人ひとりのお口の状態に合わせたオーダーメイドのクリーニングをご提供します。</p>
+        <div class="merit-block">
+          <div class="mb-head"><span class="mb-label mb-pros">MERIT</span><span class="mb-jp">メリット</span></div>
+          <ul class="mb-list mb-pros-list">
+            <li>ただ汚れを取るだけでなく、<strong>「また受けたい」と思える仕上がりと時間</strong> をつくるクリーニング</li>
+            <li>保険診療でも丁寧に行っていますが、自費ではさらに細かく、時間をかけて <strong>お一人おひとりに合わせたオーダーメイド</strong> のケアをご提供</li>
+            <li>痛みが苦手な方でも心地よく通えるよう、より丁寧に、時間をかけて施術します</li>
+          </ul>
+        </div>
+        <div class="merit-block">
+          <div class="mb-head"><span class="mb-label mb-cons">NOTE</span><span class="mb-jp">ご注意・デメリット</span></div>
+          <ul class="mb-list mb-cons-list">
+            <li>保険適用外のため費用が高めとなります。<strong>しっかりケアしたい方・見た目も大切にしたい方</strong> におすすめのメニューです</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
